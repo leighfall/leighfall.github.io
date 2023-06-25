@@ -23,7 +23,7 @@
   border-radius: 20px;
   background: rgba(26, 26, 26, 0.95);
   width: 50vw;
-  min-width: 350px;
+  min-width: 300px;
   justify-content: center;
   text-align: center;
   color: #ffffff;
