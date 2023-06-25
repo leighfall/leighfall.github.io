@@ -1,14 +1,9 @@
 <script setup lang="ts">
-import { RouterLink, RouterView } from 'vue-router';
+import { RouterView } from 'vue-router';
 </script>
 
 <template>
-  <header>
-    <nav>
-      <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/about">About</RouterLink>
-    </nav>
-  </header>
+  <header></header>
 
   <RouterView />
 </template>
@@ -17,7 +12,7 @@ import { RouterLink, RouterView } from 'vue-router';
 @import '@/assets/main.less';
 
 html {
-  color: #FFFFFF;
+  color: #ffffff;
   background-image: url('@/assets/images/heroimage.jpg');
   background-repeat: no-repeat;
   background-position: center center;
