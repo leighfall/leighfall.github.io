@@ -1,0 +1,15 @@
+// Media Queries
+
+@phone-max: 600px;
+@laptop-min: 992px;
+@desktop-min: 1200px;
+
+.phone(@styles) {
+    @media screen and (max-width: @phone-max) { @styles(); }
+}
+.laptop(@styles) {
+    @media screen and (max-width: @laptop-min) { @styles(); }
+}
+.desktop(@styles) {
+    @media screen and (min-width: @laptop-min) { @styles(); }
+}
