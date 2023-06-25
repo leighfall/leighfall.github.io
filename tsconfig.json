@@ -12,6 +12,7 @@
   "compilerOptions": {
     "target": "es2022",
     "module": "es2022",
+    "moduleResolution": "Node",
     "allowUnreachableCode": false
   },
   "exclude": [
@@ -24,4 +25,5 @@
   "include": [
     "src/*"
   ],
+  "skipLibCheck": true,
 }

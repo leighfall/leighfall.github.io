@@ -1,5 +1,4 @@
 import '@/assets/main.less';
-import 'materialize-css/dist/css/materialize.min.css';
 
 import { createApp } from 'vue';
 

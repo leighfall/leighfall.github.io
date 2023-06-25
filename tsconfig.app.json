@@ -10,6 +10,7 @@
     "./node_modules/@types/node/index.d.ts",
     "dist",
   ],
+  "skipLibCheck": true,
   "compilerOptions": {
     "composite": true,
     "baseUrl": ".",
