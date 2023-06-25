@@ -18,7 +18,7 @@
 .container {
   display: flex;
   align-items: center;
-  margin-top: 12%;
+  margin: 12% auto 0 auto;
   padding: 20px;
   border-radius: 20px;
   background: rgba(26, 26, 26, 0.95);
