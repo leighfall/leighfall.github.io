@@ -13,6 +13,8 @@
 </template>
 
 <style lang="less" scoped>
+@import '@/assets/main.less';
+
 .container {
   display: flex;
   align-items: center;
@@ -21,9 +23,14 @@
   border-radius: 20px;
   background: rgba(26, 26, 26, 0.95);
   width: 50vw;
+  min-width: 350px;
   justify-content: center;
   text-align: center;
   color: #ffffff;
-  font-size: 3em;
+  font-size: 3rem;
+
+  .phone({
+    font-size: 1.5rem;
+  });
 }
 </style>
