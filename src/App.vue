@@ -12,15 +12,17 @@ import { RouterView } from 'vue-router';
 @import '@/assets/main.less';
 
 html {
-  color: #ffffff;
-  background-image: url('@/assets/images/heroimage.jpg');
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+  background-color: rgb(26, 26, 26);
+  font-family: calibri;
+}
+
+a {
+  text-decoration: none;
+  color: @pink;
+
+  &:hover {
+    color: @purple;
+  }
 }
 
 /*Overriding webkit*/
