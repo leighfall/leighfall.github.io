@@ -10,7 +10,11 @@ import SocialMedia from '../components/SocialMedia.vue';
         <div class="pic">
           <img src="../assets/images/profilepicsmall.png" />
         </div>
-        <div class="name">Autumn Henderson</div>
+        <div class="name">
+          Autumn
+          <br />
+          Henderson
+        </div>
       </div>
       <div class="role">
         <p>Junior Frontend Engineer</p>
