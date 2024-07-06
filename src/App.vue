@@ -14,6 +14,8 @@ import { RouterView } from 'vue-router';
 html {
   background-color: rgb(26, 26, 26);
   font-family: calibri;
+  width: 98%;
+  margin: 0 auto;
 }
 
 a {

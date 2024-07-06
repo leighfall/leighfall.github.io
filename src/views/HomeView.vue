@@ -83,7 +83,7 @@ import SocialMedia from '../components/SocialMedia.vue';
 .container {
   display: flex;
   flex-flow: row;
-  margin: 5% auto 0 auto;
+  margin: 55px auto 0 auto;
   padding: 20px;
   background: rgba(26, 26, 26, 0.95);
   width: 75vw;
@@ -96,6 +96,7 @@ import SocialMedia from '../components/SocialMedia.vue';
     display: flex;
     flex-flow: column;
     width: 100%;
+    padding: 0;
   });
 }
 
