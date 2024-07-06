@@ -17,8 +17,7 @@ import SocialMedia from '../components/SocialMedia.vue';
         </div>
       </div>
       <div class="role">
-        <p>Junior Frontend Engineer</p>
-        <!-- <p>Aspiring Full-stack Engineer</p> -->
+        <p>Software Engineer</p>
       </div>
       <div class="tagline">Bringing designs to life with seamless frontend development</div>
       <SocialMedia />
@@ -37,7 +36,9 @@ import SocialMedia from '../components/SocialMedia.vue';
       </p>
       <p>
         I attended
-        <a href="vanderbilt.edu" class="vanderbilt" target="_blank">Vanderbilt University</a>
+        <a href="https://www.vanderbilt.edu" class="vanderbilt" target="_blank">
+          Vanderbilt University
+        </a>
         , where I immediately fell in love with learning about the environment, how it has changed,
         and where it is going. While honing my coding skills, my fascination with fossils and rocks,
         and what they could tell us about Earth's past and future, led me to pursue a B.A. in Earth
@@ -45,7 +46,7 @@ import SocialMedia from '../components/SocialMedia.vue';
       </p>
       <p>
         After graduating from Vanderbilt, I worked for
-        <a href="target.com" class="target" target="_blank">Target Corporation</a>
+        <a href="https://www.target.com" class="target" target="_blank">Target Corporation</a>
         in various roles. Throughout my 6-year tenure, I spent the last 3 years as a Food Team Lead,
         overseeing the operations of the Grocery and Starbucks departments. I led a team of 18 to
         ensure the floor was fully stocked with fresh fruits, veggies, and pasta while creating the
@@ -54,18 +55,18 @@ import SocialMedia from '../components/SocialMedia.vue';
       <p>
         Throughout all of this, my passion for coding never wavered. I decided to go back to school
         at the
-        <a href="utk.edu" class="ut" target="_blank">University of Tennessee</a>
+        <a href="https://www.utk.edu" class="ut" target="_blank">University of Tennessee</a>
         in Knoxville to pursue that passion once and for all. I completed a second Bachelor's degree
         in Computer Science, focusing on Software Development, with a minor in Cybersecurity. During
         my final year, I had the pleasure of interning for both
-        <a href="uscellular.com" class="uscc" target="_blank">UScellular</a>
+        <a href="https://www.uscellular.com" class="uscc" target="_blank">UScellular</a>
         and
-        <a href="kub.org" class="kub" target="_blank">Knoxville Utilities Board</a>
+        <a href="https://www.kub.org" class="kub" target="_blank">Knoxville Utilities Board</a>
         , where I worked on automation projects and customer-facing website development. Currently,
         I work full-time as a Software Engineer for
-        <a href="cadre5.com" target="_blank">Cadre5</a>
+        <a href="https://www.cadre5.com" target="_blank">Cadre5</a>
         , where I get to continue expressing my passion for front-end programming using the
-        <a href="vuejs.org" class="vue" target="_blank">Vue 3</a>
+        <a href="https://www.vuejs.org" class="vue" target="_blank">Vue 3</a>
         framework and building software for national laboratories.
       </p>
       <p>
@@ -84,7 +85,6 @@ import SocialMedia from '../components/SocialMedia.vue';
   flex-flow: row;
   margin: 5% auto 0 auto;
   padding: 20px;
-  border-radius: 50px;
   background: rgba(26, 26, 26, 0.95);
   width: 75vw;
   min-width: 300px;
@@ -92,7 +92,10 @@ import SocialMedia from '../components/SocialMedia.vue';
   font-size: 16px;
 
   .phone({
-    font-size: 1.5rem;
+    font-size: 1rem;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
   });
 }
 
@@ -100,6 +103,10 @@ import SocialMedia from '../components/SocialMedia.vue';
   display: flex;
   flex-flow: column;
   width: 40%;
+
+  .phone({
+    width: 100%;
+  });
 }
 
 .content {
@@ -111,6 +118,13 @@ import SocialMedia from '../components/SocialMedia.vue';
   p {
     margin: 7px 0;
   }
+
+  .phone({
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    margin: 20px 0 0 0;
+  });
 }
 
 .title {
