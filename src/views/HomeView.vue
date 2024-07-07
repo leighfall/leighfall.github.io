@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import SectionHeader from '../components/SectionHeader.vue';
 import SocialMedia from '../components/SocialMedia.vue';
+import JobsView from './JobsView.vue';
 </script>
 
 <template>
@@ -23,60 +24,85 @@ import SocialMedia from '../components/SocialMedia.vue';
       <SocialMedia />
     </div>
     <div class="content">
-      <SectionHeader>Hello World</SectionHeader>
-      <p>
-        Ever heard of
-        <a href="https://www.neopets.com/" target="_blank">Neopets</a>
-        ?
-      </p>
-      <p>
-        That's where I found my passion for front-end website development when I was 14 years old.
-        The community inspired me to learn HTML and CSS so that I could create beautiful layouts for
-        the guilds I became a part of.
-      </p>
-      <p>
-        I attended
-        <a href="https://www.vanderbilt.edu" class="vanderbilt" target="_blank">
-          Vanderbilt University
-        </a>
-        , where I immediately fell in love with learning about the environment, how it has changed,
-        and where it is going. While honing my coding skills, my fascination with fossils and rocks,
-        and what they could tell us about Earth's past and future, led me to pursue a B.A. in Earth
-        and Environmental Sciences.
-      </p>
-      <p>
-        After graduating from Vanderbilt, I worked for
-        <a href="https://www.target.com" class="target" target="_blank">Target Corporation</a>
-        in various roles. Throughout my 6-year tenure, I spent the last 3 years as a Food Team Lead,
-        overseeing the operations of the Grocery and Starbucks departments. I led a team of 18 to
-        ensure the floor was fully stocked with fresh fruits, veggies, and pasta while creating the
-        ultimate guest experience.
-      </p>
-      <p>
-        Throughout all of this, my passion for coding never wavered. I decided to go back to school
-        at the
-        <a href="https://www.utk.edu" class="ut" target="_blank">University of Tennessee</a>
-        in Knoxville to pursue that passion once and for all. I completed a second Bachelor's degree
-        in Computer Science, focusing on Software Development, with a minor in Cybersecurity. During
-        my final year, I had the pleasure of interning for both
-        <a href="https://www.uscellular.com" class="uscc" target="_blank">UScellular</a>
-        and
-        <a href="https://www.kub.org" class="kub" target="_blank">Knoxville Utilities Board</a>
-        , where I worked on automation projects and customer-facing website development. Currently,
-        I work full-time as a Software Engineer for
-        <a href="https://www.cadre5.com" target="_blank">Cadre5</a>
-        , where I get to continue expressing my passion for front-end programming using the
-        <a href="https://www.vuejs.org" class="vue" target="_blank">Vue 3</a>
-        framework and building software for national laboratories.
-      </p>
-      <p>
-        When I'm not programming, you can find me doing yoga, playing video games, watching
-        binge-worthy shows on Hulu, rock climbing, or crafting my website.
-      </p>
+      <div class="section">
+        <SectionHeader>Hello World</SectionHeader>
+        <p>
+          Ever heard of
+          <a href="https://www.neopets.com/" target="_blank" title="Neopets">Neopets</a>
+          ?
+        </p>
+        <p>
+          That's where I found my passion for front-end website development when I was 14 years old.
+          The community inspired me to learn HTML and CSS so that I could create beautiful layouts
+          for the guilds I became a part of.
+        </p>
+        <p>
+          I attended
+          <a
+            href="https://www.vanderbilt.edu"
+            class="vanderbilt"
+            target="_blank"
+            title="Vanderbilt University">
+            Vanderbilt University
+          </a>
+          , where I immediately fell in love with learning about the environment, how it has
+          changed, and where it is going. While honing my coding skills, my fascination with fossils
+          and rocks, and what they could tell us about Earth's past and future, led me to pursue a
+          B.A. in Earth and Environmental Sciences.
+        </p>
+        <p>
+          After graduating from Vanderbilt, I worked for
+          <a href="https://www.target.com" class="target" target="_blank" title="Target">
+            Target Corporation
+          </a>
+          in various roles. Throughout my 6-year tenure, I spent the last 3 years as a Food Team
+          Lead, overseeing the operations of the Grocery and Starbucks departments. I led a team of
+          18 to ensure the floor was fully stocked with fresh fruits, veggies, and pasta while
+          creating the ultimate guest experience.
+        </p>
+        <p>
+          Throughout all of this, my passion for coding never wavered. I decided to go back to
+          school at the
+          <a href="https://www.utk.edu" class="ut" target="_blank" title="University of Tennessee">
+            University of Tennessee
+          </a>
+          in Knoxville to pursue that passion once and for all. I completed a second Bachelor's
+          degree in Computer Science, focusing on Software Development, with a minor in
+          Cybersecurity. During my final year, I had the pleasure of interning for both
+          <a href="https://www.uscellular.com" class="uscc" target="_blank" title="UScellular">
+            UScellular
+          </a>
+          and
+          <a
+            href="https://www.kub.org"
+            class="kub"
+            target="_blank"
+            title="Knoxville Utilities Board">
+            Knoxville Utilities Board
+          </a>
+          , where I worked on automation projects and customer-facing website development.
+          Currently, I work full-time as a Software Engineer for
+          <a href="https://www.cadre5.com" target="_blank" title="Cadre5">Cadre5</a>
+          , where I get to continue expressing my passion for front-end programming using the
+          <a href="https://www.vuejs.org" class="vue" target="_blank" title="Vue 3">Vue 3</a>
+          framework and building software for national laboratories.
+        </p>
+        <p>
+          When I'm not programming, you can find me doing yoga, playing video games, watching
+          binge-worthy shows on Hulu, rock climbing, or crafting my website.
+        </p>
+      </div>
+      <div class="section">
+        <SectionHeader>Software Experience</SectionHeader>
+        <JobsView />
+      </div>
+      <!-- <div class="section">
+        <SectionHeader>Noteworthy Projects</SectionHeader>
+      </div> -->
     </div>
   </div>
 </template>
-<a href="" class="" target="_blank"></a>
+
 <style lang="less" scoped>
 @import '@/assets/main.less';
 
@@ -89,9 +115,18 @@ import SocialMedia from '../components/SocialMedia.vue';
   width: 75vw;
   min-width: 300px;
   color: #ffffff;
-  font-size: 16px;
+  font-size: 18px;
+  max-width: 1100px;
 
   .phone({
+    font-size: 1rem;
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    padding: 0;
+  });
+
+  .laptop({
     font-size: 1rem;
     display: flex;
     flex-flow: column;
@@ -106,6 +141,10 @@ import SocialMedia from '../components/SocialMedia.vue';
   width: 40%;
 
   .phone({
+    width: 100%;
+  });
+
+  .laptop({
     width: 100%;
   });
 }
@@ -126,6 +165,19 @@ import SocialMedia from '../components/SocialMedia.vue';
     width: 100%;
     margin: 20px 0 0 0;
   });
+
+  .laptop({
+    display: flex;
+    flex-flow: column;
+    width: 100%;
+    margin: 20px 0 0 0;
+  });
+}
+
+.section {
+  display: flex;
+  flex-flow: column;
+  margin-bottom: 35px;
 }
 
 .title {

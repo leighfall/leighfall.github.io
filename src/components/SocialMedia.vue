@@ -26,7 +26,7 @@ defineOptions({ name: 'SocialMedia' });
   </div>
 </template>
 
-<style>
+<style lang="less" scoped>
 @import '@/assets/main.less';
 
 .wrapper {
