@@ -139,13 +139,25 @@ import JobsView from './JobsView.vue';
   display: flex;
   flex-flow: column;
   width: 40%;
+  align-self: start;
+  position: sticky;
+  height: auto;
+  top: 75px;
 
   .phone({
     width: 100%;
+    align-self: normal;
+    position: initial;
+    height: auto;
+    top: 0;
   });
 
   .laptop({
     width: 100%;
+    align-self: normal;
+    position: initial;
+    height: auto;
+    top: 0;
   });
 }
 
