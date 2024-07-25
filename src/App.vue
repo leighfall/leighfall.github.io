@@ -21,6 +21,7 @@ html {
 a {
   text-decoration: none;
   color: @pink;
+  transition: 0.3s;
 
   &:hover {
     color: @purple;

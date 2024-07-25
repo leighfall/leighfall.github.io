@@ -1,9 +1,11 @@
 <script setup lang="ts">
-import type { Project } from '@/models/Project';
+import type { Experience } from '@/models/Experience';
+import SkillPill from './SkillPill.vue';
+
 defineOptions({ name: 'JobContainer' });
 
 defineProps<{
-  item: Project;
+  item: Experience;
 }>();
 </script>
 
@@ -11,14 +13,14 @@ defineProps<{
   <div class="project">
     <div class="left">
       <div class="jobtitle">
-        {{ item.Title }}
+        {{ item.JobTitle }}
       </div>
-      <div>
+      <div class="company">
+        {{ item.Company }}
+      </div>
+      <div class="dates">
         {{ item.Date }}
       </div>
-      <!-- <div>
-        <img :src="item.Thumbnail" />
-      </div> -->
     </div>
     <div class="right">
       <ul>
@@ -26,6 +28,9 @@ defineProps<{
           <li>{{ description }}</li>
         </div>
       </ul>
+      <div class="skills">
+        <SkillPill v-for="skill in item.Tags" :key="skill">{{ skill }}</SkillPill>
+      </div>
     </div>
   </div>
 </template>
@@ -41,6 +46,7 @@ defineProps<{
   border-radius: 6px;
   padding: 8px;
   margin-bottom: 25px;
+  transition: 0.3s;
 
   &:hover {
     background-color: @grey;
@@ -56,7 +62,7 @@ defineProps<{
       box-shadow: none;
       border-radius: 0;
     }
-  });
+  });;
 }
 
 .left {
@@ -67,12 +73,17 @@ defineProps<{
   margin-left: 4px;
 
   .laptop({
+    flex-flow: row;
     width: 100%;
     border: none;
     margin: 0;
     border-bottom: 1px solid @white-light;
     margin-bottom: 4px;
     padding-bottom: 5px;
+  });
+
+  .phone ({
+    flex-flow: column;
   });
 }
 
@@ -106,5 +117,45 @@ defineProps<{
 
 .jobtitle {
   font-weight: 600;
+
+  .laptop({
+    padding-right: 10px;
+    border-right: 1px solid @white-light;
+  });
+
+  .phone ({
+    padding: 0;
+    border: none;
+  });
+}
+
+.company {
+  .laptop ({
+    margin-left: 10px;
+  });
+
+  .phone ({
+    margin: 0;
+  });
+}
+
+.dates {
+  .laptop ({
+    margin-left: auto;
+  });
+
+  .phone ({
+    margin: 0;
+  });
+}
+
+.skills {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 20px 0 0 20px;
+
+  .laptop({
+    margin: 20px 0 0 0;
+  });
 }
 </style>

@@ -2,6 +2,9 @@
 import SectionHeader from '../components/SectionHeader.vue';
 import SocialMedia from '../components/SocialMedia.vue';
 import JobsView from './JobsView.vue';
+import ProjectView from './ProjectView.vue';
+import SkillsView from '../components/SkillsView.vue';
+import SideNav from '../components/SideNav.vue';
 </script>
 
 <template>
@@ -21,10 +24,12 @@ import JobsView from './JobsView.vue';
         <p>Software Engineer</p>
       </div>
       <div class="tagline">Bringing designs to life with seamless frontend development</div>
+      <SkillsView />
+      <SideNav />
       <SocialMedia />
     </div>
     <div class="content">
-      <div class="section">
+      <div class="section" id="about">
         <SectionHeader>Hello World</SectionHeader>
         <p>
           Ever heard of
@@ -92,12 +97,13 @@ import JobsView from './JobsView.vue';
           binge-worthy shows on Hulu, rock climbing, or crafting my website.
         </p>
       </div>
-      <div class="section">
+      <div class="section" id="experience">
         <SectionHeader>Software Experience</SectionHeader>
         <JobsView />
       </div>
-      <!-- <div class="section">
+      <!-- <div class="section" id="projects">
         <SectionHeader>Noteworthy Projects</SectionHeader>
+        <ProjectView />
       </div> -->
     </div>
   </div>
@@ -118,14 +124,6 @@ import JobsView from './JobsView.vue';
   font-size: 18px;
   max-width: 1100px;
 
-  .phone({
-    font-size: 1rem;
-    display: flex;
-    flex-flow: column;
-    width: 100%;
-    padding: 0;
-  });
-
   .laptop({
     font-size: 1rem;
     display: flex;
@@ -143,14 +141,6 @@ import JobsView from './JobsView.vue';
   position: sticky;
   height: auto;
   top: 75px;
-
-  .phone({
-    width: 100%;
-    align-self: normal;
-    position: initial;
-    height: auto;
-    top: 0;
-  });
 
   .laptop({
     width: 100%;
@@ -170,13 +160,6 @@ import JobsView from './JobsView.vue';
   p {
     margin: 7px 0;
   }
-
-  .phone({
-    display: flex;
-    flex-flow: column;
-    width: 100%;
-    margin: 20px 0 0 0;
-  });
 
   .laptop({
     display: flex;
@@ -218,7 +201,7 @@ import JobsView from './JobsView.vue';
 
 .role {
   display: flex;
-  flex-flow: column;
+  flex-flow: row;
   font-size: 1.5rem;
   margin-top: 10px;
 

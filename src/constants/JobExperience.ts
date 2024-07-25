@@ -22,7 +22,7 @@ export const JobExperience: Experience[] = [
     ],
     Date: 'Oct 2021 - May 2022',
     Link: '',
-    Tags: ['tag1', 'tag2'],
+    Tags: ['Ember', 'JavaScript', 'Handlebars', 'CSS', 'Git', 'Java'],
   },
   {
     JobTitle: 'Service Assurance Intern',
@@ -33,6 +33,6 @@ export const JobExperience: Experience[] = [
     ],
     Date: 'Jun 2021 - Aug 2021',
     Link: '',
-    Tags: ['', ''],
+    Tags: ['Python', 'Tableau'],
   },
 ];

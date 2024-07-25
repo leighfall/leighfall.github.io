@@ -11,4 +11,6 @@ export const Tags = {
   PYTHON: 'Python',
   JAVA: 'Java',
   EMBER: 'Ember',
+  HANDLEBARS: 'Handlebars',
+  TABLEAU: 'Tableau',
 };

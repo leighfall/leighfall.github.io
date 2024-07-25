@@ -7,7 +7,7 @@ defineOptions({ name: 'SocialMedia' });
 </script>
 
 <template>
-  <div class="wrapper">
+  <div class="socialmedia">
     <a href="https://github.com/leighfall" title="GitHub" target="_blank">
       <i class="fa-brands fa-github first-icon"></i>
     </a>
@@ -29,10 +29,11 @@ defineOptions({ name: 'SocialMedia' });
 <style lang="less" scoped>
 @import '@/assets/main.less';
 
-.wrapper {
+.socialmedia {
   display: flex;
   flex-flow: row;
-  margin-top: 20px;
+  margin-top: 70px;
+  // justify-content: space-around;
 }
 
 .icons {

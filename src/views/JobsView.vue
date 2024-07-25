@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import ProjectContainer from '@/components/ProjectContainer.vue';
+import JobContainer from '@/components/JobContainer.vue';
 import { JobExperience } from '../constants/JobExperience';
 
 defineOptions({ name: 'JobsView' });
@@ -8,7 +8,7 @@ defineOptions({ name: 'JobsView' });
 <template>
   <div class="jobs-view">
     <div v-for="job in JobExperience" :key="job.Company">
-      <ProjectContainer :item="job" />
+      <JobContainer :item="job" />
     </div>
   </div>
 </template>
