@@ -1,12 +1,26 @@
 <script setup lang="ts">
+import { ref } from 'vue';
 import { RouterLink } from 'vue-router';
+
+const emit = defineEmits<{
+  activeSection: [value: 'home' | 'about' | 'experience'];
+}>();
+
+const activeLink = ref<'home' | 'about' | 'experience'>('home');
+
+function setActiveLink(link: 'home' | 'about' | 'experience') {
+  activeLink.value = link;
+  emit('activeSection', activeLink.value);
+}
 </script>
 
 <template>
   <nav class="sidenav">
-    <RouterLink to="/" class="link">Home</RouterLink>
-    <RouterLink to="#about" class="link">About</RouterLink>
-    <RouterLink to="#experience" class="link">Experience</RouterLink>
+    <RouterLink to="/" class="link" @click="setActiveLink('home')">Home</RouterLink>
+    <RouterLink to="#about" class="link" @click="setActiveLink('about')">About</RouterLink>
+    <RouterLink to="#experience" class="link" @click="setActiveLink('experience')">
+      Experience
+    </RouterLink>
     <!-- <RouterLink to="#projects" class="link">Projects</RouterLink>
     <RouterLink to="/blog" class="link">Blog</RouterLink>
     <RouterLink to="/hireme" class="link">Hire Me</RouterLink> -->
