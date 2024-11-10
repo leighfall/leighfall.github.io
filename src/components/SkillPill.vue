@@ -24,14 +24,14 @@ defineOptions({ name: 'SkillPill' });
   text-align: center;
   transition: 0.3s;
 
-  &:hover {
-    cursor: pointer;
-    background-color: fade(@pink, 25%);
-  }
+  // &:hover {
+  //   cursor: pointer;
+  //   background-color: fade(@pink, 25%);
+  // }
 
-  &:active {
-    // color: #000000;
-    border-color: @pink;
-  }
+  // &:active {
+  //   // color: #000000;
+  //   border-color: @pink;
+  // }
 }
 </style>
