@@ -71,6 +71,7 @@ defineProps<{
   width: 30%;
   border-right: 1px solid @white-light;
   margin-left: 4px;
+  padding-right: 4px;
 
   .laptop({
     flex-flow: row;

@@ -109,6 +109,13 @@ const activeSection = ref<'home' | 'about' | 'experience'>('home');
         <SectionHeader>Noteworthy Projects</SectionHeader>
         <ProjectView />
       </div> -->
+      <div class="footer" id="footer">
+        Built in Visual Studio Code using Vue 3, LESS and TypeScript by me. Design inspired by
+        <a href="https://brittanychiang.com/" target="_blank" title="Brittany Chiang's Portfolio">
+          Brittany Chiang's Portfolio</a>. 
+         Icons from
+        <a href="https://fontawesome.com/" target="_blank" title="Font Awesome">Font Awesome</a>.
+      </div>
     </div>
   </div>
 </template>
@@ -187,6 +194,12 @@ const activeSection = ref<'home' | 'about' | 'experience'>('home');
   display: flex;
   flex-flow: column;
   margin-bottom: 35px;
+}
+
+.footer {
+  margin-bottom: 35px;
+  font-size: 1rem;
+  color: @white-light;
 }
 
 .title {
