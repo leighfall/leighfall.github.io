@@ -7,6 +7,7 @@ import JobsView from './JobsView.vue';
 // import ProjectView from './ProjectView.vue';
 import SkillsView from '../components/SkillsView.vue';
 import SideNav from '../components/SideNav.vue';
+import { ManagementExperience, SoftwareExperience } from '../constants/JobExperience';
 
 const activeSection = ref<'home' | 'about' | 'experience'>('home');
 </script>
@@ -103,7 +104,11 @@ const activeSection = ref<'home' | 'about' | 'experience'>('home');
       </div>
       <div class="section" id="experience">
         <SectionHeader>Software Experience</SectionHeader>
-        <JobsView />
+        <JobsView :job-experience="SoftwareExperience"/>
+      </div>
+      <div class="section" id="managementExperience">
+        <SectionHeader>Management Experience</SectionHeader>
+        <JobsView :job-experience="ManagementExperience"/>
       </div>
       <!-- <div class="section" id="projects">
         <SectionHeader>Noteworthy Projects</SectionHeader>

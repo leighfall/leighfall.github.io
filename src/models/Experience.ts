@@ -4,5 +4,5 @@ export interface Experience {
   Description: string[];
   Date: string;
   Link: string;
-  Tags: string[];
+  Tags?: string[];
 }

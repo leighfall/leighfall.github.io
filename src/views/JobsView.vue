@@ -1,13 +1,18 @@
 <script setup lang="ts">
 import JobContainer from '@/components/JobContainer.vue';
-import { JobExperience } from '../constants/JobExperience';
+import { Experience } from '../models/Experience';
 
 defineOptions({ name: 'JobsView' });
+
+defineProps<{
+  jobExperience: Experience[];
+  sectionDescription?: string;
+}>();
 </script>
 
 <template>
   <div class="jobs-view">
-    <div v-for="job in JobExperience" :key="job.Company">
+    <div v-for="job in jobExperience" :key="job.Company">
       <JobContainer :item="job" />
     </div>
   </div>
