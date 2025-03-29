@@ -3,6 +3,7 @@ import { ref } from 'vue';
 
 import SectionHeader from '../components/SectionHeader.vue';
 import SocialMedia from '../components/SocialMedia.vue';
+import FancyLink from '@/components/FancyLink.vue';
 import JobsView from './JobsView.vue';
 // import ProjectView from './ProjectView.vue';
 import SkillsView from '../components/SkillsView.vue';
@@ -104,11 +105,16 @@ const activeSection = ref<'home' | 'about' | 'experience'>('home');
       </div>
       <div class="section" id="experience">
         <SectionHeader>Software Experience</SectionHeader>
-        <JobsView :job-experience="SoftwareExperience"/>
+        <JobsView :job-experience="SoftwareExperience" />
+        <FancyLink
+          link="../public/documents/Resume - Autumn Henderson.pdf"
+          link-text="View Full Résumé"
+          title-text="Autumn's Resume"
+          new-window />
       </div>
       <div class="section" id="managementExperience">
         <SectionHeader>Management Experience</SectionHeader>
-        <JobsView :job-experience="ManagementExperience"/>
+        <JobsView :job-experience="ManagementExperience" />
       </div>
       <!-- <div class="section" id="projects">
         <SectionHeader>Noteworthy Projects</SectionHeader>
@@ -117,9 +123,11 @@ const activeSection = ref<'home' | 'about' | 'experience'>('home');
       <div class="footer" id="footer">
         Built in Visual Studio Code using Vue 3, LESS and TypeScript by me. Design inspired by
         <a href="https://brittanychiang.com/" target="_blank" title="Brittany Chiang's Portfolio">
-          Brittany Chiang's Portfolio</a>. 
-         Icons from
-        <a href="https://fontawesome.com/" target="_blank" title="Font Awesome">Font Awesome</a>.
+          Brittany Chiang's Portfolio
+        </a>
+        . Icons from
+        <a href="https://fontawesome.com/" target="_blank" title="Font Awesome">Font Awesome</a>
+        .
       </div>
     </div>
   </div>

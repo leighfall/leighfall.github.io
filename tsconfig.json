@@ -13,7 +13,11 @@
     "target": "es2022",
     "module": "es2022",
     "moduleResolution": "Node",
-    "allowUnreachableCode": false
+    "allowUnreachableCode": false,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"],
+    }
   },
   "exclude": [
     "node_modules",
