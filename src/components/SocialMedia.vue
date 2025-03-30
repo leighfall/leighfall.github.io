@@ -23,6 +23,12 @@ defineOptions({ name: 'SocialMedia' });
       target="_blank">
       <i class="fa-brands fa-youtube icons"></i>
     </a>
+    <a href="https://app.thestorygraph.com/profile/leighfall" title="StoryGraph" target="_blank">
+      <i class="fa-solid fa-book-open icons" />
+    </a>
+    <a href="https://steamcommunity.com/profiles/76561198810817601" title="Steam" target="_blank">
+      <i class="fa-brands fa-steam icons" />
+    </a>
   </div>
 </template>
 
