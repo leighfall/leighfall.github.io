@@ -106,11 +106,11 @@ const activeSection = ref<'home' | 'about' | 'experience'>('home');
       <div class="section" id="experience">
         <SectionHeader>Software Experience</SectionHeader>
         <JobsView :job-experience="SoftwareExperience" />
-        <FancyLink
+        <!-- <FancyLink
           link="../public/documents/Resume - Autumn Henderson.pdf"
           link-text="View Full Résumé"
           title-text="Autumn's Resume"
-          new-window />
+          new-window /> -->
       </div>
       <div class="section" id="managementExperience">
         <SectionHeader>Management Experience</SectionHeader>
