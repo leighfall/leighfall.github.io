@@ -12,7 +12,7 @@ defineProps<{
 
 <template>
   <div class="jobs-view">
-    <div v-for="job in jobExperience" :key="job.Company">
+    <div v-for="job in jobExperience" :key="job.Company" class="job-item">
       <JobContainer :item="job" />
     </div>
   </div>
@@ -25,5 +25,6 @@ defineProps<{
   display: flex;
   flex-flow: column;
   width: 100%;
+  gap: 3vw;
 }
 </style>

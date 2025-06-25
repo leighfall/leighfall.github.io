@@ -207,6 +207,11 @@ const activeSection = ref<'home' | 'about' | 'experience'>('home');
   display: flex;
   flex-flow: column;
   margin-bottom: 35px;
+  line-height: 1.7;
+
+  p {
+    margin: 2vh 0;
+  }
 }
 
 .footer {

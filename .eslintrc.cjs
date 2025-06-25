@@ -19,5 +19,6 @@ module.exports = {
         bracketSameLine: true,
       },
     ],
+    'vue/multi-word-component-names': 'off',
   },
 };

@@ -83,7 +83,7 @@ defineProps<{
     padding-bottom: 5px;
   });
 
-  .phone ({
+  .phone({
     flex-flow: column;
   });
 }
@@ -124,28 +124,28 @@ defineProps<{
     border-right: 1px solid @white-light;
   });
 
-  .phone ({
+  .phone({
     padding: 0;
     border: none;
   });
 }
 
 .company {
-  .laptop ({
+  .laptop({
     margin-left: 10px;
   });
 
-  .phone ({
+  .phone({
     margin: 0;
   });
 }
 
 .dates {
-  .laptop ({
+  .laptop({
     margin-left: auto;
   });
 
-  .phone ({
+  .phone({
     margin: 0;
   });
 }
