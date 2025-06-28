@@ -28,6 +28,10 @@ a {
   }
 }
 
+body {
+  margin: 0 8px 8px 8px;
+}
+
 /*Overriding webkit*/
 *:focus-visible {
   outline-offset: 0px;

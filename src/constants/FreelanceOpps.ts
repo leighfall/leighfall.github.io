@@ -6,7 +6,7 @@ export const FreelanceOpps: Freelance[] = [
     info: 'body1',
   },
   {
-    header: 'header1',
-    info: 'body1',
+    header: 'header2',
+    info: 'body2',
   },
 ];

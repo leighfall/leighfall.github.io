@@ -1,0 +1,103 @@
+<script setup lang="ts">
+import { ref, computed, watch, nextTick } from 'vue';
+
+defineOptions({ name: 'Collapsible' });
+
+defineProps<{
+  mainText?: string;
+  id: string;
+}>();
+
+const expanded = ref(false);
+const bodyRef = ref<HTMLElement | null>(null);
+const height = ref('0px');
+
+const toggle = () => {
+  expanded.value = !expanded.value;
+};
+
+const style = computed(() => ({
+  maxHeight: height.value,
+  transition: 'max-height 0.3s ease',
+  overflow: 'hidden',
+}));
+
+watch(expanded, async () => {
+  await nextTick();
+  if (expanded.value && bodyRef.value) {
+    height.value = `${bodyRef.value.scrollHeight}px`;
+  } else {
+    height.value = '0px';
+  }
+});
+</script>
+
+<template>
+  <div class="collapsing">
+    <button
+      class="collapsing-header"
+      :aria-expanded="expanded"
+      :aria-controls="`collapsing-control-${id}`"
+      type="button"
+      @click="toggle">
+      <slot name="header">
+        <span class="main-text">{{ mainText }}</span>
+      </slot>
+      <span class="caret" :class="{ rotated: expanded }" aria-hidden="true">⌄</span>
+    </button>
+
+    <div class="collapsing-body" :id="`collapsing-body-${id}`" ref="bodyRef" :style role="region">
+      <div class="collapsing-body-inner">
+        <slot />
+      </div>
+    </div>
+  </div>
+</template>
+
+<style lang="less" scoped>
+.collapsing {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  .collapsing-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    border: none;
+    background: none;
+    padding: 0.5rem 0;
+    font-size: 1rem;
+    width: 100%;
+    text-align: left;
+
+    &:focus {
+      outline: 2px solid #555;
+      outline-offset: 2px;
+    }
+
+    .main-text {
+      flex: 1;
+    }
+
+    .caret {
+      display: inline-block;
+      transition: transform 0.3s ease;
+      transform: rotate(0deg);
+
+      &.rotated {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .collapsing-body {
+    overflow: hidden;
+
+    .collapsing-body-inner {
+      padding: 0.5rem 0;
+    }
+  }
+}
+</style>

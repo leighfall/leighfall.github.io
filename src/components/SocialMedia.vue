@@ -9,7 +9,7 @@ defineOptions({ name: 'SocialMedia' });
 <template>
   <div class="socialmedia">
     <a href="https://github.com/leighfall" title="GitHub" target="_blank">
-      <i class="fa-brands fa-github first-icon"></i>
+      <i class="fa-brands fa-github icons"></i>
     </a>
     <a href="https://www.linkedin.com/in/autumnlhenderson/" title="LinkedIn" target="_blank">
       <i class="fa-brands fa-linkedin icons"></i>
@@ -39,16 +39,16 @@ defineOptions({ name: 'SocialMedia' });
   display: flex;
   flex-flow: row;
   margin-top: 70px;
-  // justify-content: space-around;
+  font-size: 1.8rem;
+  gap: 25px;
+
+  .phone({
+    margin-top: 4vh;
+    gap: 7vw;
+  });
 }
 
 .icons {
-  padding: 0px 8px;
   font-size: 1.8rem;
-}
-
-.first-icon {
-  font-size: 1.8rem;
-  padding: 0px 8px 0px 0;
 }
 </style>
