@@ -20,5 +20,9 @@ defineOptions({ name: 'SectionHeader' });
   font-weight: 400;
   letter-spacing: 4px;
   text-align: right;
+
+  .phone({
+    text-align: center;
+  });
 }
 </style>
