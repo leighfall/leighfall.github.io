@@ -69,7 +69,7 @@ watch(expanded, async () => {
     cursor: pointer;
     border: none;
     background: none;
-    padding: 1vh 1vw 1vh 0;
+    padding: 1vh 1vh 1vh 0;
     font-size: 1.3rem;
     width: 100%;
     text-align: left;
@@ -100,7 +100,7 @@ watch(expanded, async () => {
     overflow: hidden;
 
     .collapsing-body-inner {
-      padding: 1vh 1vw;
+      padding: 1vh;
       background: @box-backround;
     }
   }
