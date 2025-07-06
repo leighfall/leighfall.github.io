@@ -100,7 +100,7 @@ watch(expanded, async () => {
     overflow: hidden;
 
     .collapsing-body-inner {
-      padding: 1vh 1vw 1vh 0;
+      padding: 1vh 1vw;
       background: @box-backround;
     }
   }
