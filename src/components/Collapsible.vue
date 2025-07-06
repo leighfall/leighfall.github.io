@@ -18,7 +18,7 @@ const toggle = () => {
 
 const style = computed(() => ({
   maxHeight: height.value,
-  transition: 'max-height 0.3s ease',
+  transition: 'max-height 0.5s ease',
   overflow: 'hidden',
 }));
 
@@ -55,6 +55,8 @@ watch(expanded, async () => {
 </template>
 
 <style lang="less" scoped>
+@import '@/assets/main.less';
+
 .collapsing {
   display: flex;
   flex-direction: column;
@@ -67,14 +69,14 @@ watch(expanded, async () => {
     cursor: pointer;
     border: none;
     background: none;
-    padding: 0.5rem 0;
-    font-size: 1rem;
+    padding: 1vh 1vw 1vh 0;
+    font-size: 1.3rem;
     width: 100%;
     text-align: left;
+    color: @white-light;
 
     &:focus {
-      outline: 2px solid #555;
-      outline-offset: 2px;
+      outline: 2px solid @white-light;
     }
 
     .main-text {
@@ -83,11 +85,13 @@ watch(expanded, async () => {
 
     .caret {
       display: inline-block;
-      transition: transform 0.3s ease;
-      transform: rotate(0deg);
+      transition: transform 0.5s ease;
+      transform: rotate(0deg) scaleX(1.8);
+      transform-origin: center center;
 
       &.rotated {
-        transform: rotate(180deg);
+        transform: rotate(180deg) scaleX(1.8);
+        transform-origin: center center;
       }
     }
   }
@@ -96,7 +100,8 @@ watch(expanded, async () => {
     overflow: hidden;
 
     .collapsing-body-inner {
-      padding: 0.5rem 0;
+      padding: 1vh 1vw 1vh 0;
+      background: @box-backround;
     }
   }
 }

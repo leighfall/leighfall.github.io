@@ -9,10 +9,12 @@ import JobsView from './JobsView.vue';
 import SkillsView from '../components/SkillsView.vue';
 import SideNav from '../components/SideNav.vue';
 import TopNav from '../components/TopNav.vue';
-import Contact from './Contact.vue';
+import Services from './Services.vue';
 import { ManagementExperience, SoftwareExperience } from '../constants/JobExperience';
 
-const activeSection = ref<'home' | 'about' | 'experience' | 'project' | 'contact' | 'blog'>('home');
+const activeSection = ref<
+  'home' | 'about' | 'experience' | 'project' | 'contact' | 'blog' | 'services'
+>('home');
 </script>
 
 <template>
@@ -130,8 +132,10 @@ const activeSection = ref<'home' | 'about' | 'experience' | 'project' | 'contact
             <JobsView :job-experience="ManagementExperience" />
           </div>
         </div>
-        <div v-else-if="activeSection === 'contact'" style="display: flex; flex-flow: column">
-          <Contact />
+        <div v-else-if="activeSection === 'services'" style="display: flex; flex-flow: column">
+          <div class="section">
+            <Services />
+          </div>
         </div>
       </Transition>
       <!-- <div class="section" id="projects">

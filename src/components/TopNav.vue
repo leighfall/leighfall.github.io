@@ -4,12 +4,12 @@ import { ref } from 'vue';
 defineOptions({ name: 'TopNav' });
 
 const emit = defineEmits<{
-  'page-selection': ['home' | 'about' | 'experience' | 'contact' | 'blog'];
+  'page-selection': ['home' | 'about' | 'experience' | 'contact' | 'blog' | 'services'];
 }>();
 
-const activePage = ref<'home' | 'about' | 'experience' | 'contact' | 'blog'>('home');
+const activePage = ref<'home' | 'about' | 'experience' | 'contact' | 'blog' | 'services'>('home');
 
-function changePage(pageType: 'home' | 'about' | 'experience' | 'contact' | 'blog') {
+function changePage(pageType: 'home' | 'about' | 'experience' | 'contact' | 'blog' | 'services') {
   activePage.value = pageType;
   emit('page-selection', activePage.value);
 }
@@ -26,12 +26,12 @@ function changePage(pageType: 'home' | 'about' | 'experience' | 'contact' | 'blo
       @click="changePage('experience')">
       Experience
     </div>
-    <!-- <div
+    <div
       class="nav-link"
-      :class="{ active: activePage === 'contact' }"
-      @click="changePage('contact')">
-      Contact
-    </div> -->
+      :class="{ active: activePage === 'services' }"
+      @click="changePage('services')">
+      Services
+    </div>
   </nav>
 </template>
 
