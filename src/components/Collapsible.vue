@@ -43,7 +43,17 @@ watch(expanded, async () => {
       <slot name="header">
         <span class="main-text">{{ mainText }}</span>
       </slot>
-      <span class="caret" :class="{ rotated: expanded }" aria-hidden="true">⌄</span>
+      <span class="caret" :class="{ rotated: expanded }" aria-hidden="true">
+        <svg width="18" height="18" viewBox="0 0 18 18" style="display: block">
+          <polyline
+            points="4,7 9,12 14,7"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </span>
     </button>
 
     <div class="collapsing-body" :id="`collapsing-body-${id}`" ref="bodyRef" :style role="region">
@@ -84,14 +94,17 @@ watch(expanded, async () => {
     }
 
     .caret {
-      display: inline-block;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 1.5em;
+      height: 1.5em;
       transition: transform 0.5s ease;
-      transform: rotate(0deg) scaleX(1.8);
-      transform-origin: center center;
+      transform: rotate(0deg);
+      transform-origin: 50% 50%;
 
       &.rotated {
-        transform: rotate(180deg) scaleX(1.8);
-        transform-origin: center center;
+        transform: rotate(180deg);
       }
     }
   }
