@@ -53,5 +53,8 @@
     "vite": "^6.2.3",
     "vitest": "^3.0.9",
     "vue-tsc": "^2.2.8"
+  },
+  "prettier": {
+    "htmlWhitespaceSensitivity": "ignore"
   }
 }

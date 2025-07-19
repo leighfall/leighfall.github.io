@@ -39,13 +39,15 @@ import SocialMedia from '../components/SocialMedia.vue';
         </div>
       </main>
       <div class="footer" id="footer">
-        Built in Visual Studio Code using Vue 3, LESS and TypeScript by me. Design inspired by
+        Built in Visual Studio Code and Cursor using Vue 3, LESS and TypeScript by me. Design
+        inspired by
         <a href="https://brittanychiang.com/" target="_blank" title="Brittany Chiang's Portfolio">
           Brittany Chiang's Portfolio
         </a>
-        . Icons from
+        <span>.</span>
+        Icons from
         <a href="https://fontawesome.com/" target="_blank" title="Font Awesome">Font Awesome</a>
-        .
+        <span>.</span>
       </div>
     </div>
   </div>

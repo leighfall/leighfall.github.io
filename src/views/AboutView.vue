@@ -8,7 +8,7 @@ import SectionHeader from '../components/SectionHeader.vue';
     <p>
       Ever heard of
       <a href="https://www.neopets.com/" target="_blank" title="Neopets">Neopets</a>
-      ?
+      <span>?</span>
     </p>
     <p>
       That's where I found my passion for front-end website development when I was 14 years old. The
@@ -24,10 +24,11 @@ import SectionHeader from '../components/SectionHeader.vue';
         title="Vanderbilt University">
         Vanderbilt University
       </a>
-      , where I immediately fell in love with learning about the environment, how it has changed,
-      and where it is going. While honing my coding skills, my fascination with fossils and rocks,
-      and what they could tell us about Earth's past and future, led me to pursue a B.A. in Earth
-      and Environmental Sciences.
+      <span>,</span>
+      where I immediately fell in love with learning about the environment, how it has changed, and
+      where it is going. While honing my coding skills, my fascination with fossils and rocks, and
+      what they could tell us about Earth's past and future, led me to pursue a B.A. in Earth and
+      Environmental Sciences.
     </p>
     <p>
       After graduating from Vanderbilt, I worked for
@@ -55,10 +56,12 @@ import SectionHeader from '../components/SectionHeader.vue';
       <a href="https://www.kub.org" class="kub" target="_blank" title="Knoxville Utilities Board">
         Knoxville Utilities Board
       </a>
-      , where I worked on automation projects and customer-facing website development. Currently, I
+      <span>,</span>
+      where I worked on automation projects and customer-facing website development. Currently, I
       work full-time as a Software Engineer for
       <a href="https://www.cadre5.com" target="_blank" title="Cadre5">Cadre5</a>
-      , where I get to continue expressing my passion for front-end programming using the
+      <span>,</span>
+      where I get to continue expressing my passion for front-end programming using the
       <a href="https://www.vuejs.org" class="vue" target="_blank" title="Vue 3">Vue 3</a>
       framework and building software for national laboratories.
     </p>
