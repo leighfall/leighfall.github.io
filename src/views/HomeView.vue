@@ -5,11 +5,14 @@ import SocialMedia from '../components/SocialMedia.vue';
 
 <template>
   <TopNav />
+  <a href="#main-content" class="skip-link">Skip to main content</a>
   <div class="container">
     <div class="sidenav">
       <div class="title">
         <div class="pic">
-          <img src="../assets/images/profilepicsmall.png" />
+          <img
+            src="../assets/images/profilepicsmall.png"
+            alt="Autumn Henderson's profile picture" />
         </div>
         <div class="name">
           Autumn
@@ -26,13 +29,15 @@ import SocialMedia from '../components/SocialMedia.vue';
       </div>
     </div>
     <div class="content">
-      <div class="section">
-        <router-view v-slot="{ Component }">
-          <Transition mode="out-in">
-            <component :is="Component" />
-          </Transition>
-        </router-view>
-      </div>
+      <main id="main-content">
+        <div class="section">
+          <router-view v-slot="{ Component }">
+            <Transition mode="out-in">
+              <component :is="Component" />
+            </Transition>
+          </router-view>
+        </div>
+      </main>
       <div class="footer" id="footer">
         Built in Visual Studio Code using Vue 3, LESS and TypeScript by me. Design inspired by
         <a href="https://brittanychiang.com/" target="_blank" title="Brittany Chiang's Portfolio">
@@ -48,6 +53,23 @@ import SocialMedia from '../components/SocialMedia.vue';
 
 <style lang="less" scoped>
 @import '@/assets/main.less';
+
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 6px;
+  background: @purple;
+  color: white;
+  padding: 8px;
+  text-decoration: none;
+  border-radius: 4px;
+  z-index: 1000;
+  transition: top 0.3s;
+
+  &:focus {
+    top: 6px;
+  }
+}
 
 .v-enter-active,
 .v-leave-active {

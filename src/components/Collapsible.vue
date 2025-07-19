@@ -37,7 +37,7 @@ watch(expanded, async () => {
     <button
       class="collapsing-header"
       :aria-expanded="expanded"
-      :aria-controls="`collapsing-control-${id}`"
+      :aria-controls="`collapsing-body-${id}`"
       type="button"
       @click="toggle">
       <slot name="header">
@@ -56,7 +56,13 @@ watch(expanded, async () => {
       </span>
     </button>
 
-    <div class="collapsing-body" :id="`collapsing-body-${id}`" ref="bodyRef" :style role="region">
+    <div
+      class="collapsing-body"
+      :id="`collapsing-body-${id}`"
+      ref="bodyRef"
+      :style="style"
+      role="region"
+      :aria-hidden="!expanded">
       <div class="collapsing-body-inner">
         <slot />
       </div>

@@ -8,25 +8,52 @@ defineOptions({ name: 'SocialMedia' });
 
 <template>
   <div class="socialmedia">
-    <a href="https://github.com/leighfall" title="GitHub" target="_blank">
+    <a
+      href="https://github.com/leighfall"
+      title="GitHub"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Visit Autumn's GitHub profile">
       <i class="fa-brands fa-github icons"></i>
     </a>
-    <a href="https://www.linkedin.com/in/autumnlhenderson/" title="LinkedIn" target="_blank">
+    <a
+      href="https://www.linkedin.com/in/autumnlhenderson/"
+      title="LinkedIn"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Visit Autumn's LinkedIn profile">
       <i class="fa-brands fa-linkedin icons"></i>
     </a>
-    <a href="https://www.facebook.com/autumn.henderson.94" title="Facebook" target="_blank">
+    <a
+      href="https://www.facebook.com/autumn.henderson.94"
+      title="Facebook"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Visit Autumn's Facebook profile">
       <i class="fa-brands fa-facebook icons"></i>
     </a>
     <a
       href="https://www.youtube.com/channel/UC2_-EnWVBGyD-TOqbx_je5g"
       title="Youtube"
-      target="_blank">
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Visit Autumn's YouTube channel">
       <i class="fa-brands fa-youtube icons"></i>
     </a>
-    <a href="https://app.thestorygraph.com/profile/leighfall" title="StoryGraph" target="_blank">
+    <a
+      href="https://app.thestorygraph.com/profile/leighfall"
+      title="StoryGraph"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Visit Autumn's StoryGraph profile">
       <i class="fa-solid fa-book-open icons" />
     </a>
-    <a href="https://steamcommunity.com/profiles/76561198810817601" title="Steam" target="_blank">
+    <a
+      href="https://steamcommunity.com/profiles/76561198810817601"
+      title="Steam"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Visit Autumn's Steam profile">
       <i class="fa-brands fa-steam icons" />
     </a>
   </div>
