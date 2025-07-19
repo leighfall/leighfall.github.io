@@ -1,0 +1,1 @@
+import{d as o,c as t,r as a,o as s,_ as c}from"./index-D_j9sb6Y.js";const n={class:"header"},r=o({name:"SectionHeader",__name:"SectionHeader",setup(d){return(e,_)=>(s(),t("div",n,[a(e.$slots,"default",{},void 0)]))}}),p=c(r,[["__scopeId","data-v-6d3c0f3e"]]);export{p as S};
