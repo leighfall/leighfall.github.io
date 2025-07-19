@@ -23,7 +23,13 @@ function handleLinkClick(path: string) {
 function handleOutsideClick(e: MouseEvent) {
   const menu = document.getElementById('mobile-nav-menu');
   const hamburger = document.getElementById('hamburger-btn');
-  if (mobileMenuOpen.value && menu && !menu.contains(e.target as Node) && hamburger && !hamburger.contains(e.target as Node)) {
+  if (
+    mobileMenuOpen.value &&
+    menu &&
+    !menu.contains(e.target as Node) &&
+    hamburger &&
+    !hamburger.contains(e.target as Node)
+  ) {
     closeMenu();
   }
 }
@@ -40,13 +46,33 @@ onBeforeUnmount(() => {
   <nav class="nav-wrap">
     <!-- Desktop Nav -->
     <div class="nav-links-desktop">
-      <router-link to="/" class="nav-link" :class="{ active: route.path === '/' }">Home</router-link>
-      <router-link to="/experience" class="nav-link" :class="{ active: route.path === '/experience' }">Experience</router-link>
-      <router-link to="/services" class="nav-link" :class="{ active: route.path === '/services' }">Services</router-link>
+      <router-link to="/" class="nav-link" :class="{ active: route.path === '/' }">
+        Home
+      </router-link>
+      <router-link
+        to="/experience"
+        class="nav-link"
+        :class="{ active: route.path === '/experience' }">
+        Experience
+      </router-link>
+      <router-link to="/services" class="nav-link" :class="{ active: route.path === '/services' }">
+        Services
+      </router-link>
     </div>
     <!-- Hamburger Icon (Mobile) -->
-    <button id="hamburger-btn" class="hamburger" @click="openMenu" aria-label="Open menu" aria-controls="mobile-nav-menu" :aria-expanded="mobileMenuOpen">
-      <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <button
+      id="hamburger-btn"
+      class="hamburger"
+      @click="openMenu"
+      aria-label="Open menu"
+      aria-controls="mobile-nav-menu"
+      :aria-expanded="mobileMenuOpen">
+      <svg
+        width="32"
+        height="32"
+        viewBox="0 0 32 32"
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg">
         <rect y="7" width="32" height="3" rx="1.5" fill="currentColor" />
         <rect y="15" width="32" height="3" rx="1.5" fill="currentColor" />
         <rect y="23" width="32" height="3" rx="1.5" fill="currentColor" />
@@ -59,14 +85,29 @@ onBeforeUnmount(() => {
       :class="{ open: mobileMenuOpen }"
       role="menu"
       aria-label="Mobile navigation"
-      tabindex="-1"
-    >
-      <button class="close-btn" @click="closeMenu" aria-label="Close menu">
-        &times;
-      </button>
-      <router-link to="/" class="nav-link" :class="{ active: route.path === '/' }" @click="handleLinkClick('/')">Home</router-link>
-      <router-link to="/experience" class="nav-link" :class="{ active: route.path === '/experience' }" @click="handleLinkClick('/experience')">Experience</router-link>
-      <router-link to="/services" class="nav-link" :class="{ active: route.path === '/services' }" @click="handleLinkClick('/services')">Services</router-link>
+      tabindex="-1">
+      <button class="close-btn" @click="closeMenu" aria-label="Close menu">&times;</button>
+      <router-link
+        to="/"
+        class="nav-link"
+        :class="{ active: route.path === '/' }"
+        @click="handleLinkClick('/')">
+        Home
+      </router-link>
+      <router-link
+        to="/experience"
+        class="nav-link"
+        :class="{ active: route.path === '/experience' }"
+        @click="handleLinkClick('/experience')">
+        Experience
+      </router-link>
+      <router-link
+        to="/services"
+        class="nav-link"
+        :class="{ active: route.path === '/services' }"
+        @click="handleLinkClick('/services')">
+        Services
+      </router-link>
     </div>
     <!-- Overlay for closing menu when clicking outside -->
     <div v-if="mobileMenuOpen" class="menu-overlay"></div>
@@ -128,7 +169,7 @@ onBeforeUnmount(() => {
   width: 260px;
   height: 100vh;
   background: @background;
-  box-shadow: -2px 0 8px rgba(0,0,0,0.15);
+  box-shadow: -2px 0 8px rgba(0, 0, 0, 0.15);
   display: flex;
   flex-direction: column;
   padding: 2rem 1.5rem 1.5rem 1.5rem;
