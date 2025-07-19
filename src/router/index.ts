@@ -28,6 +28,9 @@ const router = createRouter({
     },
     // Optionally, add a catch-all 404 route here
   ],
+  scrollBehavior(to, from, savedPosition) {
+    return { top: 0 };
+  },
 });
 
 export default router;
