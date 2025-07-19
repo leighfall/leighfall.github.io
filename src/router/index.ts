@@ -6,24 +6,27 @@ const router = createRouter({
   routes: [
     {
       path: '/',
-      name: 'home',
       component: HomeView,
+      children: [
+        {
+          path: '',
+          name: 'about',
+          component: () => import('../views/AboutView.vue'),
+        },
+        {
+          path: 'experience',
+          name: 'experience',
+          component: () => import('../views/ExperienceView.vue'),
+        },
+        {
+          path: 'services',
+          name: 'services',
+          component: () => import('../views/Services.vue'),
+        },
+        // Add more child routes as needed
+      ],
     },
-    {
-      path: '/about',
-      name: 'about',
-      component: () => import('../views/AboutView.vue'),
-    },
-    {
-      path: '/experience',
-      name: 'experience',
-      component: () => import('../views/JobsView.vue'),
-    },
-    {
-      path: '/services',
-      name: 'services',
-      component: () => import('../views/Services.vue'),
-    },
+    // Optionally, add a catch-all 404 route here
   ],
 });
 

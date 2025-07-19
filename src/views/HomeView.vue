@@ -1,24 +1,10 @@
 <script setup lang="ts">
-import { ref } from 'vue';
-
-import SectionHeader from '../components/SectionHeader.vue';
-import SocialMedia from '../components/SocialMedia.vue';
-import FancyLink from '@/components/FancyLink.vue';
-import JobsView from './JobsView.vue';
-// import ProjectView from './ProjectView.vue';
-import SkillsView from '../components/SkillsView.vue';
-import SideNav from '../components/SideNav.vue';
 import TopNav from '../components/TopNav.vue';
-import Services from './Services.vue';
-import { ManagementExperience, SoftwareExperience } from '../constants/JobExperience';
-
-const activeSection = ref<
-  'home' | 'about' | 'experience' | 'project' | 'contact' | 'blog' | 'services'
->('home');
+import SocialMedia from '../components/SocialMedia.vue';
 </script>
 
 <template>
-  <TopNav @page-selection="activeSection = $event" />
+  <TopNav />
   <div class="container">
     <div class="sidenav">
       <div class="title">
@@ -36,34 +22,17 @@ const activeSection = ref<
           <p>Software Engineer</p>
         </div>
         <div class="tagline">Bringing designs to life with seamless frontend development</div>
-        <!-- <SkillsView /> -->
-        <!-- <SideNav @active-section="activeSection = $event" /> -->
         <SocialMedia />
       </div>
     </div>
     <div class="content">
-      <Transition mode="out-in">
-        <div v-if="activeSection === 'home'" style="display: flex; flex-flow: column">
-          <div class="section" id="about">
-            <AboutView />
-          </div>
-        </div>
-        <div v-else-if="activeSection === 'experience'" style="display: flex; flex-flow: column">
-          <div class="section" id="experience">
-            <JobsView :job-experience="SoftwareExperience" sectionHeader="Software Experience" />
-          </div>
-          <div class="section" id="managementExperience">
-            <JobsView
-              :job-experience="ManagementExperience"
-              sectionHeader="Management Experience" />
-          </div>
-        </div>
-        <div v-else-if="activeSection === 'services'" style="display: flex; flex-flow: column">
-          <div class="section">
-            <Services />
-          </div>
-        </div>
-      </Transition>
+      <div class="section">
+        <router-view v-slot="{ Component }">
+          <Transition mode="out-in">
+            <component :is="Component" />
+          </Transition>
+        </router-view>
+      </div>
       <div class="footer" id="footer">
         Built in Visual Studio Code using Vue 3, LESS and TypeScript by me. Design inspired by
         <a href="https://brittanychiang.com/" target="_blank" title="Brittany Chiang's Portfolio">

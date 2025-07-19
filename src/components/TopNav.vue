@@ -1,37 +1,23 @@
 <script setup lang="ts">
-import { ref } from 'vue';
+import { useRoute } from 'vue-router';
 
 defineOptions({ name: 'TopNav' });
 
-const emit = defineEmits<{
-  'page-selection': ['home' | 'about' | 'experience' | 'contact' | 'blog' | 'services'];
-}>();
-
-const activePage = ref<'home' | 'about' | 'experience' | 'contact' | 'blog' | 'services'>('home');
-
-function changePage(pageType: 'home' | 'about' | 'experience' | 'contact' | 'blog' | 'services') {
-  activePage.value = pageType;
-  emit('page-selection', activePage.value);
-}
+const route = useRoute();
 </script>
 
 <template>
   <nav class="nav-wrap">
-    <div class="nav-link" :class="{ active: activePage === 'home' }" @click="changePage('home')">
-      Home
-    </div>
-    <div
+    <router-link to="/" class="nav-link" :class="{ active: route.path === '/' }">Home</router-link>
+    <router-link
+      to="/experience"
       class="nav-link"
-      :class="{ active: activePage === 'experience' }"
-      @click="changePage('experience')">
+      :class="{ active: route.path === '/experience' }">
       Experience
-    </div>
-    <div
-      class="nav-link"
-      :class="{ active: activePage === 'services' }"
-      @click="changePage('services')">
+    </router-link>
+    <router-link to="/services" class="nav-link" :class="{ active: route.path === '/services' }">
       Services
-    </div>
+    </router-link>
   </nav>
 </template>
 
