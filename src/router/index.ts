@@ -23,6 +23,43 @@ const router = createRouter({
           name: 'services',
           component: () => import('../views/Services.vue'),
         },
+        {
+          path: 'personal',
+          name: 'personal',
+          component: () => import('../views/PersonalLayout.vue'),
+          children: [
+            {
+              path: '',
+              name: 'personal-home',
+              component: () => import('../views/PersonalView.vue'),
+            },
+            // {
+            //   path: 'gaming',
+            //   name: 'personal-gaming',
+            //   component: () => import('../views/personal/GamingView.vue'),
+            // },
+            {
+              path: 'fostering',
+              name: 'personal-fostering',
+              component: () => import('../views/personal/FosteringView.vue'),
+            },
+            // {
+            //   path: 'reading',
+            //   name: 'personal-reading',
+            //   component: () => import('../views/personal/ReadingView.vue'),
+            // },
+            // {
+            //   path: 'fitness',
+            //   name: 'personal-fitness',
+            //   component: () => import('../views/personal/FitnessView.vue'),
+            // },
+            // {
+            //   path: 'crafting',
+            //   name: 'personal-crafting',
+            //   component: () => import('../views/personal/CraftingView.vue'),
+            // },
+          ],
+        },
         // Add more child routes as needed
       ],
     },

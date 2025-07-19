@@ -58,6 +58,7 @@ onBeforeUnmount(() => {
       <router-link to="/services" class="nav-link" :class="{ active: route.path === '/services' }">
         Services
       </router-link>
+      <router-link to="/personal" class="nav-link" :class="{ active: route.path.startsWith('/personal') }">Personal</router-link>
     </div>
     <!-- Hamburger Icon (Mobile) -->
     <button
@@ -107,6 +108,13 @@ onBeforeUnmount(() => {
         :class="{ active: route.path === '/services' }"
         @click="handleLinkClick('/services')">
         Services
+      </router-link>
+      <router-link
+        to="/personal"
+        class="nav-link"
+        :class="{ active: route.path.startsWith('/personal') }"
+        @click="handleLinkClick('/personal')">
+        Personal
       </router-link>
     </div>
     <!-- Overlay for closing menu when clicking outside -->
