@@ -10,7 +10,7 @@ import { SoftwareExperience, ManagementExperience } from '../constants/JobExperi
     <JobsView :job-experience="ManagementExperience" sectionHeader="Management Experience" />
     <div class="resume-link-container">
       <FancyLink
-        link="/documents/Resume - Autumn Henderson.pdf"
+        link="./documents/Resume - Autumn Henderson.pdf"
         link-text="View Full Résumé"
         title-text="Autumn's Resume"
         :new-window="true" />
