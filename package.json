@@ -14,6 +14,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
+    "lodash": "^4.17.21",
     "vue": "^3.3.2",
     "vue-router": "^4.2.0"
   },
@@ -30,6 +31,7 @@
     "@storybook/vue3-vite": "^8.6.11",
     "@tsconfig/node18": "^2.0.1",
     "@types/jsdom": "^21.1.1",
+    "@types/lodash": "^4.17.20",
     "@types/materialize-css": "^1.0.11",
     "@types/node": "^18.16.8",
     "@vitejs/plugin-vue": "^5.2.3",
