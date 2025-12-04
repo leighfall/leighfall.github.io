@@ -29,3 +29,4 @@ coverage
 *storybook.log
 .storybook
 src/stories
+rules/personal-profile.md

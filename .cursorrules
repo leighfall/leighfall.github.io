@@ -1,0 +1,57 @@
+# AUTOMATIC RULE ENFORCEMENT
+# This project uses modular rule files for automatic enforcement for a **web portfolio/personal profile site**. Always reference and follow:
+# - rules/programmer-profile.md         - Experience levels and explanation guidelines
+# - rules/app-requirements.md           - Application features and requirements
+# - rules/naming-conventions.md         - Coding standards and naming rules
+# - rules/stack-specific-rules.md       - Technology-specific guidelines
+# - rules/project-structure.md          - File organization and structure
+# - rules/personal-profile.md           - Personal interaction guidelines (gitignored due to personal reasons)
+
+# Project Purpose and Overview
+- This repository is a personal portfolio web application to showcase skills, experience, projects, resume, and contact information.
+- Stack is **Vue 3** (Composition API, script setup), **TypeScript**, **Less** (for styling), and **Pinia** (state management, optional). There is no backend, database, or mobile component.
+- This project is intended for single-user, static or statically-deployed sites such as GitHub Pages.
+
+# Core Features
+- About/bio section
+- Skills and technologies list
+- Work experience and project portfolio (with images, links, and details)
+- Social/contact links
+- Downloadable resume PDF
+- Light/dark theme toggle
+- Accessible markup and keyboard/focus support
+- Responsive/mobile-friendly layout
+
+# Models and Naming
+- TypeScript interfaces for UI models are prefixed with 'I' and use PascalCase (e.g., IProject, ISkill)
+- All properties in UI models use camelCase
+- Variable names, including refs, always use camelCase
+- Static constants use UPPER_CASE
+- See rules/naming-conventions.md for further details.
+
+# File and Folder Organization
+- Use folder structure from rules/project-structure.md
+- Vue component files: script → template → style (Less)
+- All libraries imported at top of file, then empty line, then project imports
+- `index.ts` exports for groups of components/utilities
+
+# Code Quality and Conventions
+- Use async/await in any asynchronous logic
+- Prefer Composition API and script setup syntax
+- Write accessible and semantic HTML in Vue components
+- Follow modern CSS/Less conventions as described in stack-specific-rules.md
+
+# Guidance and Explanations
+- AI/Contributors should refer to rules/programmer-profile.md for how detailed an explanation should be, based on the technology in use
+- Explanations should be concise, but clarify reasoning where helpful
+
+# Enforcement Instructions
+# Before making any changes, you MUST:
+# 1. Read the relevant rule files in /rules directory
+# 2. Follow all naming conventions from rules/naming-conventions.md
+# 3. Apply experience-level explanations from rules/programmer-profile.md
+# 4. Ensure compliance with stack-specific rules from rules/stack-specific-rules.md
+# 5. Maintain project structure as defined in rules/project-structure.md
+# 6. Verify all requirements from rules/app-requirements.md are considered
+
+# These rules are MANDATORY and must be enforced automatically
