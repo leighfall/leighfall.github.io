@@ -24,7 +24,11 @@ import SocialMedia from '../components/SocialMedia.vue';
         <div class="role">
           <p>Software Engineer</p>
         </div>
-        <div class="tagline">Bringing designs to life with seamless frontend development</div>
+        <div class="tagline">
+          I build clean, accessible, performant web apps with excellent UX and modern frontend
+          architecture. I specialize in converting messy or unfinished ideas into polished, reliable
+          products.
+        </div>
         <SocialMedia />
       </div>
     </div>

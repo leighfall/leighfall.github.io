@@ -69,7 +69,7 @@ export function useResponsiveDetectorRoot(): ResponsiveDetector {
     screenOrientation.value = getOrientation();
   }
 
-  const responsiveneDetector = {
+  const responsiveDetector = {
     screenWidth: readonly(screenWidth),
     screenOrientation: readonly(screenOrientation),
     isMobile,
@@ -77,9 +77,9 @@ export function useResponsiveDetectorRoot(): ResponsiveDetector {
     isDesktop,
   };
 
-  provide(INJECTION_KEY, responsiveneDetector);
+  provide(INJECTION_KEY, responsiveDetector);
 
-  return responsiveneDetector;
+  return responsiveDetector;
 }
 
 export function useResponsiveDetector(): ResponsiveDetector | undefined {

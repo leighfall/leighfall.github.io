@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { ref, onMounted, onBeforeUnmount } from 'vue';
+import { ref, onMounted, onBeforeUnmount, watch } from 'vue';
 import { useRoute, useRouter } from 'vue-router';
+import { useResponsiveDetector } from '@/utilities/responsiveDetector';
 
 defineOptions({ name: 'TopNav' });
 
@@ -8,9 +9,29 @@ const route = useRoute();
 const router = useRouter();
 const mobileMenuOpen = ref(false);
 
+const responsive = useResponsiveDetector();
+
+watch(
+  () => responsive?.isDesktop?.value,
+  (isDesktop) => {
+    if (isDesktop && mobileMenuOpen.value) {
+      closeMenu();
+    }
+  }
+);
+
+onMounted(() => {
+  document.addEventListener('mousedown', handleOutsideClick);
+});
+
+onBeforeUnmount(() => {
+  document.removeEventListener('mousedown', handleOutsideClick);
+});
+
 function openMenu() {
   mobileMenuOpen.value = true;
 }
+
 function closeMenu() {
   mobileMenuOpen.value = false;
 }
@@ -33,13 +54,6 @@ function handleOutsideClick(e: MouseEvent) {
     closeMenu();
   }
 }
-
-onMounted(() => {
-  document.addEventListener('mousedown', handleOutsideClick);
-});
-onBeforeUnmount(() => {
-  document.removeEventListener('mousedown', handleOutsideClick);
-});
 </script>
 
 <template>
@@ -58,7 +72,12 @@ onBeforeUnmount(() => {
       <router-link to="/services" class="nav-link" :class="{ active: route.path === '/services' }">
         Services
       </router-link>
-      <router-link to="/personal" class="nav-link" :class="{ active: route.path.startsWith('/personal') }">Personal</router-link>
+      <router-link
+        to="/personal"
+        class="nav-link"
+        :class="{ active: route.path.startsWith('/personal') }">
+        Personal
+      </router-link>
     </div>
     <!-- Hamburger Icon (Mobile) -->
     <button
