@@ -120,7 +120,7 @@ watch(expanded, async () => {
 
     .collapsing-body-inner {
       padding: 1vh;
-      background: @box-backround;
+      background: @box-background;
     }
   }
 }
