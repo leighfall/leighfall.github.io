@@ -43,11 +43,22 @@ const router = createRouter({
               name: 'personal-fostering',
               component: () => import('../views/personal/FosteringView.vue'),
             },
-            // {
-            //   path: 'reading',
-            //   name: 'personal-reading',
-            //   component: () => import('../views/personal/ReadingView.vue'),
-            // },
+            {
+              path: 'climbing',
+              name: 'personal-climbing',
+              component: () => import('../views/personal/ClimbingView.vue'),
+            },
+            {
+              path: 'reading',
+              name: 'personal-reading',
+              component: () => import('../views/personal/ReadingView.vue'),
+            },
+            {
+              path: 'reading/:bookId',
+              name: 'personal-reading-review',
+              component: () => import('../views/personal/BookReviewView.vue'),
+              props: true,
+            },
             // {
             //   path: 'fitness',
             //   name: 'personal-fitness',

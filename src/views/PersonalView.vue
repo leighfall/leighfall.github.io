@@ -19,15 +19,20 @@ import SectionHeader from '../components/SectionHeader.vue';
         <p>Video games, board games, and everything in between.</p>
       </router-link>
 
-      <router-link to="/personal/reading" class="hobby-card">
-        <h3>Reading</h3>
-        <p>Books, articles, and my reading journey.</p>
-      </router-link>
+
 
       <router-link to="/personal/fitness" class="hobby-card">
         <h3>Fitness</h3>
         <p>Yoga, rock climbing, and staying active.</p>
       </router-link> -->
+      <router-link to="/personal/climbing" class="hobby-card">
+        <h3>Rock Climbing</h3>
+        <p>Climbing gyms, outdoor adventures, and personal progress videos!</p>
+      </router-link>
+      <router-link to="/personal/reading" class="hobby-card">
+        <h3>Reading</h3>
+        <p>Books, articles, and my reading journey.</p>
+      </router-link>
     </div>
   </div>
 </template>
@@ -48,7 +53,7 @@ import SectionHeader from '../components/SectionHeader.vue';
 }
 
 .hobby-card {
-  background: @box-backround;
+  background: @box-background;
   padding: 0 1.5rem 1.5rem 1.5rem;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.1);
