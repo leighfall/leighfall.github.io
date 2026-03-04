@@ -46,22 +46,10 @@ defineProps<{
   border-radius: 6px;
   padding: 8px;
   margin-bottom: 25px;
-  // transition: 0.3s;
-
-  // &:hover {
-  //   background-color: @grey;
-  //   box-shadow: 2px 4px 6px 0px rgb(125, 2, 207);
-  // }
 
   .laptop ({
     flex-flow: column;
     padding: 0;
-
-    // &:hover {
-    //   background-color: transparent;
-    //   box-shadow: none;
-    //   border-radius: 0;
-    // }
   });;
 }
 
@@ -100,6 +88,10 @@ defineProps<{
 
   li {
     margin: 7px 0;
+
+    &::marker {
+      color: @purple;
+    }
 
     &:first-child {
       margin-top: 0;

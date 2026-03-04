@@ -76,7 +76,6 @@ function goToReview(bookId: string) {
 
 .genres-summary {
   margin-bottom: 1.8rem;
-  color: @white-light;
 }
 
 .reading-section {

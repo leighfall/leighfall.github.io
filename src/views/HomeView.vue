@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import TopNav from '../components/TopNav.vue';
 import SocialMedia from '../components/SocialMedia.vue';
+import { useResponsiveDetectorRoot } from '@/utilities/responsiveDetector';
+
+useResponsiveDetectorRoot();
 </script>
 
 <template>

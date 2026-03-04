@@ -69,6 +69,9 @@ function handleOutsideClick(e: MouseEvent) {
         :class="{ active: route.path === '/experience' }">
         Experience
       </router-link>
+      <router-link to="/projects" class="nav-link" :class="{ active: route.path === '/projects' }">
+        Projects
+      </router-link>
       <router-link to="/services" class="nav-link" :class="{ active: route.path === '/services' }">
         Services
       </router-link>
@@ -120,6 +123,13 @@ function handleOutsideClick(e: MouseEvent) {
         :class="{ active: route.path === '/experience' }"
         @click="handleLinkClick('/experience')">
         Experience
+      </router-link>
+      <router-link
+        to="/projects"
+        class="nav-link"
+        :class="{ active: route.path === '/projects' }"
+        @click="handleLinkClick('/projects')">
+        Projects
       </router-link>
       <router-link
         to="/services"
