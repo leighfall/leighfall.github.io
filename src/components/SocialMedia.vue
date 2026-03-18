@@ -56,6 +56,12 @@ defineOptions({ name: 'SocialMedia' });
       aria-label="Visit Autumn's Steam profile">
       <i class="fa-brands fa-steam icons" />
     </a>
+    <a
+      href="mailto:autumn.leigh.henderson@gmail.com"
+      title="Email"
+      aria-label="Send Autumn an email">
+      <i class="fa-solid fa-envelope icons" />
+    </a>
   </div>
 </template>
 

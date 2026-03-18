@@ -25,7 +25,16 @@ useResponsiveDetectorRoot();
       </div>
       <div class="subtext">
         <div class="role">
-          <p>Software Engineer</p>
+          <p>Software Engineer &nbsp;&ndash;&nbsp;
+            <a
+              href="./documents/Resume - Autumn Henderson.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              title="Autumn's Resume"
+              class="resume-link">
+              Résumé <i class="fa-solid fa-arrow-up-right-from-square" />
+            </a>
+          </p>
         </div>
         <div class="tagline">
           I build clean, accessible, performant web apps with excellent UX and modern frontend
@@ -198,13 +207,29 @@ useResponsiveDetectorRoot();
 }
 
 .role {
-  display: flex;
-  flex-flow: row;
   font-size: 1.5rem;
   margin-top: 10px;
 
   p {
     margin: 0;
+  }
+}
+
+.resume-link {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 8px;
+  color: @pink;
+  text-decoration: none;
+  transition: color 0.2s ease;
+
+  i {
+    font-size: 0.9rem;
+    transform: translateY(-1px);
+  }
+
+  &:hover {
+    color: @purple;
   }
 }
 
