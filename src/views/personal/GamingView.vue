@@ -50,7 +50,7 @@ import SectionHeader from '../../components/SectionHeader.vue';
 }
 
 .game-section {
-  background: @box-backround;
+  background: @box-background;
   padding: 1.5rem;
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.1);
