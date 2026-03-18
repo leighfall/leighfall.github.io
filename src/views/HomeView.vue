@@ -97,7 +97,7 @@ useResponsiveDetectorRoot();
   background: rgba(26, 26, 26, 0.95);
   width: 75vw;
   min-width: 300px;
-  color: #ffffff;
+  color: @white;
   font-size: 18px;
   max-width: 1100px;
 

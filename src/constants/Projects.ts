@@ -1,17 +1,16 @@
 import type { Project } from '@/models/Project';
 
 export const PROJECTS: Project[] = [
-  // Add your projects here
-  // Example structure:
   {
-    Title: 'Portfolio Website',
+    Title: 'Implementing Automated Testing with AI',
     Description: [
-      'Personal portfolio site built with Vue 3, TypeScript, and Less.',
-      'Features dark/light theme toggle, accessible markup, and responsive design.',
+      'How I implemented a 3.5 minute end-to-end Playwright test suite on an in-flight app with Claude.',
     ],
-    Date: '2024',
-    Link: 'https://github.com/leighfall/leighfall.github.io',
-    Tags: ['Vue 3', 'TypeScript', 'Less', 'Pinia'],
-    Thumbnail: '/path/to/thumbnail.png',
+    Date: '3/18/2026',
+    Link: '',
+    Tags: ['Playwright', 'Automated Testing', 'Claude', 'React', 'C#'],
+    Thumbnail: '',
+    type: 'case-study',
+    slug: 'automated-testing-ai',
   },
 ];

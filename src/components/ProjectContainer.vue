@@ -1,15 +1,42 @@
 <script setup lang="ts">
 import type { Project } from '@/models/Project';
+import SkillPill from '@/components/SkillPill.vue';
+import { useRouter } from 'vue-router';
 
 defineOptions({ name: 'ProjectContainer' });
 
-defineProps<{
+const props = defineProps<{
   item: Project;
 }>();
+
+const router = useRouter();
+
+const isCaseStudy = props.item.type === 'case-study' && !!props.item.slug;
+
+function handleClick() {
+  if (isCaseStudy) {
+    router.push(`/projects/${props.item.slug}`);
+  }
+}
+
+function handleKeyDown(e: KeyboardEvent) {
+  if (!isCaseStudy) return;
+  if (e.key === 'Enter' || e.key === ' ') {
+    handleClick();
+    e.preventDefault();
+  }
+}
 </script>
 
 <template>
-  <div class="project-container">
+  <div
+    class="project-container"
+    :class="{ clickable: isCaseStudy }"
+    :tabindex="isCaseStudy ? 0 : undefined"
+    :role="isCaseStudy ? 'button' : undefined"
+    :title="isCaseStudy ? `Read case study: ${item.Title}` : undefined"
+    @click="handleClick"
+    @keydown="handleKeyDown">
     <img
       v-if="item.Thumbnail"
       class="thumbnail"
@@ -20,18 +47,20 @@ defineProps<{
         <h4 class="title">{{ item.Title }}</h4>
         <span class="date">{{ item.Date }}</span>
       </div>
-      <ul class="description-list">
-        <li v-for="(description, index) in item.Description" :key="index">
+      <div class="description-list">
+        <p v-for="(description, index) in item.Description" :key="index">
           {{ description }}
-        </li>
-      </ul>
-      <div v-if="item.Tags && item.Tags.length" class="tags">
-        <span v-for="tag in item.Tags" :key="tag" class="tag">{{ tag }}</span>
+        </p>
       </div>
-      <a v-if="item.Link" :href="item.Link" target="_blank" rel="noopener noreferrer" class="link">
-        View Project
-        <i class="fa-solid fa-arrow-up-right-from-square" />
-      </a>
+      <div v-if="item.Tags && item.Tags.length" class="tags">
+        <SkillPill v-for="tag in item.Tags" :key="tag">{{ tag }}</SkillPill>
+      </div>
+      <div class="link-icon-wrapper">
+        <i v-if="item.type === 'case-study'" class="fa-solid fa-arrow-right link-icon" />
+        <a v-else-if="item.Link" :href="item.Link" target="_blank" rel="noopener noreferrer" class="link-icon-anchor">
+          <i class="fa-solid fa-arrow-up-right-from-square link-icon" />
+        </a>
+      </div>
     </div>
   </div>
 </template>
@@ -51,9 +80,24 @@ defineProps<{
   padding: 1.5rem;
   gap: 2rem;
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
-  transition: box-shadow 0.15s, border-color 0.15s;
+  transition: box-shadow 0.15s, border-color 0.15s, transform 0.15s;
   min-width: 0;
   overflow: hidden;
+
+  &.clickable {
+    cursor: pointer;
+
+    &:hover,
+    &:focus {
+      border-color: @purple;
+      box-shadow: 0 6px 18px rgba(128, 90, 213, 0.1);
+      transform: translateY(-2px);
+
+      .link-icon {
+        color: @purple;
+      }
+    }
+  }
 
   .thumbnail {
     width: 200px;
@@ -92,47 +136,45 @@ defineProps<{
         font-size: 0.95em;
         white-space: nowrap;
       }
+
+    }
+
+    .link-icon-wrapper {
+      display: flex;
+      margin-top: auto;
+      padding-top: 0.5rem;
+      margin-left: auto;
+    }
+
+    .link-icon {
+      color: @white-light;
+      font-size: 0.9em;
+    }
+
+    .link-icon-anchor {
+      color: @white-light;
+      text-decoration: none;
+
+      &:hover {
+        color: @purple;
+      }
     }
 
     .description-list {
-      list-style: none;
       padding: 0;
       margin: 0 0 1rem 0;
       color: @white-light;
       line-height: 1.6;
 
-      li {
-        margin-bottom: 0.5rem;
-        position: relative;
-        padding-left: 1.2rem;
-
-        &::before {
-          content: '•';
-          color: @purple;
-          position: absolute;
-          left: 0;
-        }
-
-        &:last-child {
-          margin-bottom: 0;
-        }
+      p {
+        margin: 0;
       }
     }
 
     .tags {
       display: flex;
       flex-wrap: wrap;
-      gap: 0.5rem;
       margin-bottom: 1rem;
-
-      .tag {
-        background: fade(@purple, 20%);
-        color: @purple;
-        padding: 0.3rem 0.7rem;
-        border-radius: 4px;
-        font-size: 0.85em;
-        border: 1px solid fade(@purple, 30%);
-      }
     }
 
     .link {

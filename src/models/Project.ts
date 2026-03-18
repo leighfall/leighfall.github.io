@@ -5,4 +5,6 @@ export interface Project {
   Link: string;
   Tags: string[];
   Thumbnail: string;
+  type?: 'link' | 'case-study';
+  slug?: string;
 }

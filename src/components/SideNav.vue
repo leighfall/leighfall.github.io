@@ -40,7 +40,7 @@ function setActiveLink(link: 'home' | 'about' | 'experience') {
 
 .link {
   margin: 0 0 20px 0;
-  color: #ffffff;
+  color: @white;
   border-bottom: 1px solid transparent;
   transition: 0.3s;
 
