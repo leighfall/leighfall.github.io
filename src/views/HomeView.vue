@@ -25,8 +25,7 @@ useResponsiveDetectorRoot();
       </div>
       <div class="subtext">
         <div class="role">
-          <p>Software Engineer &nbsp;&ndash;&nbsp;
-            <a
+          <p>Software Engineer<span class="dash">&nbsp;&ndash;&nbsp;</span><a
               href="./documents/Resume - Autumn Henderson.pdf"
               target="_blank"
               rel="noopener noreferrer"
@@ -212,6 +211,19 @@ useResponsiveDetectorRoot();
 
   p {
     margin: 0;
+  }
+
+  .dash {
+    .phone({
+      display: none;
+    });
+  }
+
+  .resume-link {
+    .phone({
+      display: block;
+      margin-top: 4px;
+    });
   }
 }
 

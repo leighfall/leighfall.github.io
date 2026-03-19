@@ -77,7 +77,9 @@ defineOptions({ name: 'SocialMedia' });
 
   .phone({
     margin-top: 4vh;
-    gap: 7vw;
+    gap: 4vw;
+    flex-wrap: wrap;
+    justify-content: center;
   });
 }
 
