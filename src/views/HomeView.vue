@@ -26,7 +26,7 @@ useResponsiveDetectorRoot();
       <div class="subtext">
         <div class="role">
           <p>Software Engineer<span class="dash">&nbsp;&ndash;&nbsp;</span><a
-              href="./documents/Resume - Autumn Henderson.pdf"
+              href="./documents/Resume - Autumn Henderson.pdf?v=2"
               target="_blank"
               rel="noopener noreferrer"
               title="Autumn's Resume"
