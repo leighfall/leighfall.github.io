@@ -58,4 +58,4 @@ Very easy by Claude once the .local is done actually. The .local version was ted
 
 That's all she wrote for this section! Easy peasy.
 
-<span class="muted">To be continued...</span>
+<span class="muted">To be continued... </span>

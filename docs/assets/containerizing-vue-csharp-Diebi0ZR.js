@@ -58,5 +58,5 @@ Very easy by Claude once the .local is done actually. The .local version was ted
 \r
 That's all she wrote for this section! Easy peasy.\r
 \r
-<span class="muted">To be continued...</span>\r
+<span class="muted">To be continued... </span>\r
 `;export{e as default};
