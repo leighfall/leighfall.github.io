@@ -1,6 +1,6 @@
 # I Had Never Containerized Anything. Here's How It Went.
 
-*It's a cold, dark day and I'm staring containers straight in their faces with the slight look of fear, but an even bigger look of excitement*
+<span class="muted">*It's a cold, dark day and I'm staring containers straight in their faces with the slight look of fear, but an even bigger look of excitement*</span>
 
 At the time of writing this, I am an applications engineer with about 4 years of professional experience.
 
@@ -52,7 +52,7 @@ Give Claude your file structure and the stack, and it can create a pretty great 
 
 Speaking of dev, Claude and I decided to start with a `Containerfile.local` to get the pattern down locally on a dev machine. This came about because, when running the initial `Containerfile`, when it hit steps like `yarn install`, it had issues with the container sitting behind the VPN. Some troubleshooting there, getting the right `yarn config` items and placing them in the `Containerfile.local` got us past that. But those same configs will probably not be used in the environment builds, because the CI runners on GitLab *probably* have their own configurations that will allow direct access to the internet. So it will get a clean `Containerfile` Will figure out once `COPY . .` is done!
 
-## Containerfile
+### Containerfile
 
 Very easy by Claude once the .local is done actually. The .local version was tedious due to the VPN and proxy issues, but the true `Containerfile` is simple. I learned that I don't need a .dev, .qual, etc. because that's literally the whole point of containers: To have one `Containerfile` and inject non-sensitive config via ConfigMaps and sensitive values like keys and passwords via Secrets. Some things Claude will want to know what your build scripts are. We had a `yarn build-container-dev` for development and qual, and a `yarn build` for staging and prod. Claude will add those to the `Containerfile`, and then the environment configs will determine which will be called.
 
