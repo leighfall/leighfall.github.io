@@ -2,6 +2,16 @@ import type { Project } from '@/models/Project';
 
 export const PROJECTS: Project[] = [
   {
+    Title: "I Had Never Containerized Anything. Here's How It Went.",
+    Description: ['How I containerized a Vue and C# web application with Claude helping me out.'],
+    Date: '3/19/2026',
+    Link: '',
+    Tags: ['Podman', 'Vue', 'C#', 'OpenShift', 'Claude'],
+    Thumbnail: '',
+    type: 'case-study',
+    slug: 'containerizing-vue-csharp',
+  },
+  {
     Title: 'Implementing Automated Testing with AI',
     Description: [
       'How I implemented a 3.5 minute end-to-end Playwright test suite on an in-flight app with Claude.',

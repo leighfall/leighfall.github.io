@@ -1,1 +1,0 @@
-const t=[{Title:"Implementing Automated Testing with AI",Description:["How I implemented a 3.5 minute end-to-end Playwright test suite on an in-flight app with Claude."],Date:"3/18/2026",Link:"",Tags:["Playwright","Automated Testing","Claude","React","C#"],Thumbnail:"",type:"case-study",slug:"automated-testing-ai"}];export{t as P};

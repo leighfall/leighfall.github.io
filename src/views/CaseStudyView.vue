@@ -29,7 +29,11 @@ onMounted(async () => {
 
 <template>
   <div class="case-study-view">
-    <FancyLink link="/projects" linkText="← Back to Projects" titleText="Return to projects" internal />
+    <FancyLink
+      link="/projects"
+      linkText="← Back to Projects"
+      titleText="Return to projects"
+      internal />
     <div v-if="notFound" class="not-found">
       <p>Case study not found.</p>
     </div>
