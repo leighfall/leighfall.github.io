@@ -1,46 +1,35 @@
-# project
+# leighfall.github.io
 
-This template should help get you started developing with Vue 3 in Vite.
+My personal portfolio site, built with Vue 3 and hosted on GitHub Pages at [www.autumnhenderson.com](https://www.autumnhenderson.com).
 
-## Recommended IDE Setup
+## Tech Stack
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
+- **Vue 3** + **TypeScript** — component framework
+- **Vite** — build tool
+- **Vue Router** — client-side routing
+- **Less** — styles
+- **Marked** — markdown rendering for case studies
+- **Storybook** — component development
 
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin) to make the TypeScript language service aware of `.vue` types.
-
-If the standalone TypeScript plugin doesn't feel fast enough to you, Volar has also implemented a [Take Over Mode](https://github.com/johnsoncodehk/volar/discussions/471#discussioncomment-1361669) that is more performant. You can enable it by the following steps:
-
-1. Disable the built-in TypeScript Extension
-    1) Run `Extensions: Show Built-in Extensions` from VSCode's command palette
-    2) Find `TypeScript and JavaScript Language Features`, right click and select `Disable (Workspace)`
-2. Reload the VSCode window by running `Developer: Reload Window` from the command palette.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vitejs.dev/config/).
-
-## Project Setup
+## Getting Started
 
 ```sh
 npm install
-```
-
-### Compile and Hot-Reload for Development
-
-```sh
 npm run dev
 ```
 
-### Type-Check, Compile and Minify for Production
+## Scripts
 
-```sh
-npm run build
-```
+| Command | Description |
+|---|---|
+| `npm run dev` | Start dev server |
+| `npm run build` | Type-check and build for production |
+| `npm run preview` | Preview the production build |
+| `npm run test:unit` | Run unit tests with Vitest |
+| `npm run lint` | Lint and auto-fix |
+| `npm run format` | Format with Prettier |
+| `npm run storybook` | Launch Storybook |
 
-### Run Unit Tests with [Vitest](https://vitest.dev/)
+## Deployment
 
-```sh
-npm run test:unit
-```
+The `build` script outputs to `/docs`, which GitHub Pages serves from the `main` branch. The CNAME file is written automatically during build.
