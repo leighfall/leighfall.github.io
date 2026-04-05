@@ -1,0 +1,1 @@
+import{d as e,o as s,c as o,k as t,_ as a}from"./index-DRc7kRyU.js";const c={class:"skillpill"},i=e({name:"SkillPill",__name:"SkillPill",setup(n){return(l,_)=>(s(),o("div",c,[t(l.$slots,"default",{},void 0)]))}}),p=a(i,[["__scopeId","data-v-14e90a7c"]]);export{p as S};
