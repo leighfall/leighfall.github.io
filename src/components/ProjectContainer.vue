@@ -16,11 +16,12 @@ const isCaseStudy = props.item.type === 'case-study' && !!props.item.slug;
 function handleClick() {
   if (isCaseStudy) {
     router.push(`/projects/${props.item.slug}`);
+  } else if (props.item.Link) {
+    window.open(props.item.Link, '_blank', 'noopener,noreferrer');
   }
 }
 
 function handleKeyDown(e: KeyboardEvent) {
-  if (!isCaseStudy) return;
   if (e.key === 'Enter' || e.key === ' ') {
     handleClick();
     e.preventDefault();
@@ -31,10 +32,10 @@ function handleKeyDown(e: KeyboardEvent) {
 <template>
   <div
     class="project-container"
-    :class="{ clickable: isCaseStudy }"
-    :tabindex="isCaseStudy ? 0 : undefined"
-    :role="isCaseStudy ? 'button' : undefined"
-    :title="isCaseStudy ? `Read case study: ${item.Title}` : undefined"
+    :class="{ clickable: item.isLink }"
+    :tabindex="0"
+    role="button"
+    :title="item.linkTitle"
     @click="handleClick"
     @keydown="handleKeyDown">
     <img
@@ -57,9 +58,9 @@ function handleKeyDown(e: KeyboardEvent) {
       </div>
       <div class="link-icon-wrapper">
         <i v-if="item.type === 'case-study'" class="fa-solid fa-arrow-right link-icon" />
-        <a v-else-if="item.Link" :href="item.Link" target="_blank" rel="noopener noreferrer" class="link-icon-anchor">
-          <i class="fa-solid fa-arrow-up-right-from-square link-icon" />
-        </a>
+        <i
+          v-else-if="item.type === 'link'"
+          class="fa-solid fa-arrow-up-right-from-square link-icon" />
       </div>
     </div>
   </div>
@@ -136,7 +137,6 @@ function handleKeyDown(e: KeyboardEvent) {
         font-size: 0.95em;
         white-space: nowrap;
       }
-
     }
 
     .link-icon-wrapper {

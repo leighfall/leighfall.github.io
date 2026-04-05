@@ -2,15 +2,25 @@
 import SectionHeader from '@/components/SectionHeader.vue';
 import ProjectContainer from '@/components/ProjectContainer.vue';
 import { PROJECTS } from '@/constants/Projects';
+import { computed } from 'vue';
 
 defineOptions({ name: 'ProjectView' });
+
+const highlights = computed(() => PROJECTS.filter((p) => p.isHighlight));
+const allProjects = computed(() => PROJECTS.filter((p) => !p.isHighlight));
 </script>
 
 <template>
   <div class="project-view">
-    <SectionHeader>Projects</SectionHeader>
-    <div v-if="PROJECTS.length" class="projects-list">
-      <ProjectContainer v-for="project in PROJECTS" :key="project.Title" :item="project" />
+    <template v-if="highlights.length">
+      <SectionHeader>Highlights</SectionHeader>
+      <div class="projects-list">
+        <ProjectContainer v-for="project in highlights" :key="project.Title" :item="project" />
+      </div>
+    </template>
+    <SectionHeader>All Projects</SectionHeader>
+    <div v-if="allProjects.length" class="projects-list">
+      <ProjectContainer v-for="project in allProjects" :key="project.Title" :item="project" />
     </div>
     <p v-else class="empty-message">No projects to display yet.</p>
   </div>
@@ -34,6 +44,7 @@ defineOptions({ name: 'ProjectView' });
   width: 100%;
   max-width: 100%;
   box-sizing: border-box;
+  margin-bottom: 2rem;
 }
 
 .empty-message {

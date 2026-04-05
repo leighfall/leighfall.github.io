@@ -2,6 +2,29 @@ import type { Project } from '@/models/Project';
 
 export const PROJECTS: Project[] = [
   {
+    Title: 'This Portfolio',
+    Description: ["The site you're on right now — built with Vue 3 and hosted on GitHub Pages."],
+    Date: '4/5/2026',
+    Link: 'https://github.com/leighfall/leighfall.github.io',
+    Tags: ['Vue', 'TypeScript', 'GitHub Pages'],
+    Thumbnail: new URL('@/assets/images/portfolio-thumbnail.png', import.meta.url).href,
+    type: 'link',
+    isLink: true,
+    linkTitle: 'View source on GitHub',
+    isHighlight: true,
+  },
+  {
+    Title: 'claude-skills',
+    Description: ['A collection of skills for Claude Code.'],
+    Date: '4/5/2026',
+    Link: 'https://github.com/leighfall/claude-skills',
+    Tags: ['Claude', 'Claude Code'],
+    Thumbnail: '',
+    type: 'link',
+    isLink: true,
+    linkTitle: `claude-skills`,
+  },
+  {
     Title: "I Had Never Containerized Anything. Here's How It Went.",
     Description: ['How I containerized a Vue and C# web application with Claude helping me out.'],
     Date: '3/19/2026',
@@ -10,6 +33,8 @@ export const PROJECTS: Project[] = [
     Thumbnail: '',
     type: 'case-study',
     slug: 'containerizing-vue-csharp',
+    isLink: true,
+    linkTitle: `Read case study: I Had Never Containerized Anything. Here's How It Went.`,
   },
   {
     Title: 'Implementing Automated Testing with AI',
@@ -22,5 +47,7 @@ export const PROJECTS: Project[] = [
     Thumbnail: '',
     type: 'case-study',
     slug: 'automated-testing-ai',
+    isLink: true,
+    linkTitle: `Read case study: Implementing Automated Testing with AI`,
   },
 ];

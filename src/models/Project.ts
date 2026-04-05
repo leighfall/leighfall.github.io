@@ -7,4 +7,7 @@ export interface Project {
   Thumbnail: string;
   type?: 'link' | 'case-study';
   slug?: string;
+  isLink?: boolean;
+  linkTitle?: string;
+  isHighlight?: boolean;
 }
