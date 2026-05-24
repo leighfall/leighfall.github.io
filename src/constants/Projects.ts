@@ -14,6 +14,18 @@ export const PROJECTS: Project[] = [
     isHighlight: true,
   },
   {
+    Title: 'Conference Notes',
+    Description: ['A Nuxt Content app for browsing and reading conference talk notes.'],
+    Date: '5/24/2026',
+    Link: 'https://conference-notes-red.vercel.app/',
+    Tags: ['Nuxt', 'Vue', 'TypeScript', 'Vercel'],
+    Thumbnail: new URL('@/assets/images/conference-notes-thumbnail.png', import.meta.url).href,
+    type: 'link',
+    isLink: true,
+    linkTitle: 'View Conference Notes',
+    isHighlight: true,
+  },
+  {
     Title: 'claude-skills',
     Description: ['A collection of skills for Claude Code.'],
     Date: '4/5/2026',
