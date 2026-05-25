@@ -91,10 +91,6 @@ watch(expanded, async () => {
     text-align: left;
     color: @white-light;
 
-    &:focus {
-      outline: 2px solid @white-light;
-    }
-
     .main-text {
       flex: 1;
     }
