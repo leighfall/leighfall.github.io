@@ -37,6 +37,21 @@ export const PROJECTS: Project[] = [
     linkTitle: `claude-skills`,
   },
   {
+    Title: 'Implementing Feature Flags Across the Stack',
+    Description: [
+      'How I designed and built a lightweight feature flag system across SQL, C#, and Vue to decouple releases from deployments.',
+    ],
+    Date: '6/19/2026',
+    Link: '',
+    Tags: ['Vue', 'C#', 'SQL', 'SSMS'],
+    Thumbnail: '',
+    type: 'case-study',
+    slug: 'implementing-feature-flags-across-stack',
+    isLink: true,
+    linkTitle: 'Read case study: Implementing Feature Flags Across the Stack',
+    isHighlight: true,
+  },
+  {
     Title: "I Had Never Containerized Anything. Here's How It Went.",
     Description: ['How I containerized a Vue and C# web application with Claude helping me out.'],
     Date: '3/19/2026',
